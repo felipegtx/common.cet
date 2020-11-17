@@ -51,5 +51,5 @@ Every single snippet of code here is shared under CETSC.
 # Content
  Each `md` file holds valuable information on a specific topic. Here's what we have right now:
  
- - **code.md:** Code tips and tricks
+ - [**code.md:**](https://github.com/felipegtx/common.cet/blob/main/code.md) Code tips and tricks
  - **env.md:** Tooling tips and tricks
