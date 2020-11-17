@@ -7,7 +7,7 @@
 
 
 # Visual Studio Code Extension
-If you already love [Visual Studio Code](https://code.visualstudio.com/) or you're just curios as to what other options you have to code for CET I'm here to give you some great news! 
+If you already love [Visual Studio Code](https://code.visualstudio.com/) or you're just curious as to what other options you have to code for CET I'm here to give you some great news! 
 
 The great [twlamb](https://github.com/twlamb) brought us this amazing extension that makes my - potentially yours as well - life *super* easy.  
 
