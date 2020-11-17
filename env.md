@@ -9,7 +9,7 @@
 # Visual Studio Code Extension
 If you already love [Visual Studio Code](https://code.visualstudio.com/) or you're just curios as to what other options you have to code for CET I'm here to give you some great news! 
 
-The great [twlamb](https://github.com/twlamb) brought us this amazing extension that makes my life *super* easy.  
+The great [twlamb](https://github.com/twlamb) brought us this amazing extension that makes my - potentially yours as well - life *super* easy.  
 
 I'm obviously talking about [vscode-cm](https://github.com/docura-io/vscode-cm), the one - and only at this point - tool for CET developers that don't want to learn/stick with emacs. It brings a huge list of features and is actively maintained. 
 
