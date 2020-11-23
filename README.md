@@ -5,6 +5,8 @@ A collection of common CET tasks and codes.
 
 I hope you enjoy and, *feel free to send Pull Requests with suggestions*!
 
+More on CET Dev on [my blog](https://www.felipegte.com/).
+
 # License
 
 Every single snippet of code here is shared under [CETSC](https://github.com/felipegtx/common.cet/blob/main/CETSC.md).
