@@ -45,6 +45,33 @@ int find2 = firstOrDefault(y in intColl -> (y == 1));
 pln(#find2);
 ```
 
+## Filter
+Find all items that fulfills a given condition or returns an empty collection if no items are found.
+
+### Code
+
+```java
+/**
+ * Find all items that fulfills a given condition or returns an empty collection
+ * if no items are found.
+ */
+public expr filter '('  @id=id "in" @collection=expr "->" @cond=expr ')' {
+    Type ct = collection.type.unalias;
+    return blockExpr {
+        @ct coll();
+        for (@id in @collection) if (@cond) coll << @id;
+        result coll;
+    };
+};
+```
+
+### Example
+
+```java
+    str[] myColl = ["house", "car", "carriage", "baby"];
+    str[] newColl = filter(y in myColl -> y.contains("car"));
+    pln(#newColl);
+```
 
 ## Dictionary initializer
 
