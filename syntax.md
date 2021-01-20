@@ -6,8 +6,6 @@ Just your good and old `if` statements on steroids.
 
 ### Code
 ```java
-
-
 /**
  * Tries to cast a given object into one of the provided types (as) OR
  * checks if it's not one of the provided ones (!in - !as)
@@ -20,8 +18,7 @@ public statement cast '(' @what=id @checkType=expr @types=list[type, ',']* ')'
     str checkTypeS = checkType.toS;
     const str regularCheck = "as";
     const str reverseTypeCheck = "(!in)";
-    const str reverseTypeCheckAs = "(!as)";
-    const str{} allowedChecks = { regularCheck, reverseTypeCheck, reverseTypeCheckAs };
+    const str{} allowedChecks = { regularCheck, reverseTypeCheck};
     
     if (checkTypeS !in allowedChecks) { 
         pln("Invalid Check Type"; #checkType; #allowedChecks);
@@ -32,7 +29,7 @@ public statement cast '(' @what=id @checkType=expr @types=list[type, ',']* ')'
     SId foundId(spnn(foundFieldId, what, checkTypeS), what.src);
     SStatements s = statement { bool @foundId = false; };
 
-    if ((checkTypeS == reverseTypeCheck) or (checkTypeS == reverseTypeCheckAs)) {
+    if (checkTypeS == reverseTypeCheck) {
 
         const str typeFieldId = "type";
         SId typeId(spnn(typeFieldId, what, checkTypeS), what.src);
@@ -144,14 +141,10 @@ public class Class4 {
     }
     
     /// Reverse composite type check
-    cast (myObject !as Class1, Class2, Class3) { 
-    /// cast (myObject !in Class1, Class2, Class3) {  /// Alternative syntax
-    
+    cast (myObject !in Class1, Class2, Class3) {
         pln("This is cool"; #myObject);
     } else { 
         pln("This is something else"; #myObject);
     }
-
-
 }
 ```
