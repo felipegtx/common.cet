@@ -17,3 +17,4 @@ Every single snippet of code here is shared under [CETSC](https://github.com/fel
  - [**code.md:**](https://github.com/felipegtx/common.cet/blob/main/code.md) Code tips and tricks.
  - [**env.md:**](https://github.com/felipegtx/common.cet/blob/main/env.md) Tooling and debugging tips and tricks.
  - [**collection.md:**](https://github.com/felipegtx/common.cet/blob/main/collection.md) Collection related tips and tricks.
+ - [**syntax.md**](https://github.com/felipegtx/common.cet/blob/main/syntax.md) Custom syntaxes for CM
