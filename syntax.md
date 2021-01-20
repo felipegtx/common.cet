@@ -1,5 +1,5 @@
 # CM Syntax
-Syntax that add some extra flavor on top of regular CM but don't fall under any of the other more specific topics in this repo.
+Syntax that add some extra flavor on top of regular CM but don't fit under any of the other more specific topics in this repo.
 
 ## ifCast
 Just your good and old `if` statements on steroids. 
