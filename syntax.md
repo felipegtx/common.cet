@@ -2,7 +2,7 @@
 Syntax that add some extra flavor on top of regular CM but don't fit under any of the other more specific topics in this repo.
 
 ## cast
-Just your good and old `if` statements on steroids. 
+Just your good and old `if` (`as` or `!in`) statements on steroids. 
 
 ### Code
 ```java
