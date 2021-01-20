@@ -1,5 +1,5 @@
-# CM Collection helpers
-Here you will find a list of all the different methods/syntaxes I've created for my projects in order to make me more productive and allow for my code to be more concise and less error prone. 
+# CM Syntax
+Syntax that add some extra flavor on top of regular CM and don't fall under any of the other more specific topics in this repo.
 
 ## ifCast
 Just your good and old `if` statements on steroids. 
