@@ -125,7 +125,7 @@ public class Class3 extends Class2 {
 public class Class4 { 
     public constructor auto();
     extend public void methodThatOnlyClass4Exposes() { 
-        pln("Hey from Class 3");
+        pln("Hey from Class 4");
     }
 }
 
