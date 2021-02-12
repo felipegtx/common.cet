@@ -25,3 +25,5 @@ Here's a list of the most used and common commands you might need to use while w
 | `ptrace`| During (or specially after) a debug session, have you ever wondered where that one left over message *"HERE!!"* is? Fear no more, `ptrace` is basically a `pln` prefixed with the path to where that message is so you know exactly what file you need to undo/recompile to get rid of that leftover message. | `ptrace("Oh no!");`| 
 | `developMode` | CET's built in flag to allow you to check whether or not you're currently running on a DEV's machine. As a matter of fact, if you haven't already, you should go check out this file: `.\base\cm\basic\release.cm`. It holds some interesting/useful flags for these sort of things. | `if (developMode) { pln("It works here!"); }` | 
 | `cfd` | Useful if you need a simple print statement to see if a method/location is being hit. It will print the method its in along with the parameters to the method.. | `cfd();` | 
+
+More useful commands can be found [here](https://support.configura.com/hc/en-us/articles/360060039274-Tracing).
