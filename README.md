@@ -13,7 +13,8 @@ Every single snippet of code here is shared under [CETSC](https://github.com/fel
 
 # Content
  Each `md` file holds valuable information on a specific topic. Here's what we have right now:
- 
+
+ - [**CETx-2023.md:**](https://github.com/felipegtx/common.cet/blob/main/CETx-2023.md) Code for CET-X's `Debugging Tools You Should Know About` presentation.
  - [**code.md:**](https://github.com/felipegtx/common.cet/blob/main/code.md) Code tips and tricks.
  - [**env.md:**](https://github.com/felipegtx/common.cet/blob/main/env.md) Tooling and debugging tips and tricks.
  - [**collection.md:**](https://github.com/felipegtx/common.cet/blob/main/collection.md) Collection related tips and tricks.
