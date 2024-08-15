@@ -1,126 +1,66 @@
-# FIKA Product Line Documentation
+Based on the provided documents, I will consolidate the information into a single, clear, and concise document. Since there is no information in the Part Numbers document, the consolidated document will be based entirely on the Configuration Logic document.
+
+# FOItemTag and FOItemTagInfo Documentation
 
 ## Overview
 
-This document provides comprehensive information about the FIKA product line, including part number structure, product categories, and configuration logic. It is designed to assist Interior Designers in effectively configuring and ordering products without requiring programming knowledge.
+This document describes the functionality and behavior of the FOItemTag and FOItemTagInfo classes, which are used for creating and managing item tags in an office environment. These classes handle the display and export of text labels associated with office items.
 
-## Part Number Structure
+## FOItemTag
 
-FIKA part numbers follow a consistent structure that provides information about the product type, dimensions, and specific features. The general format is:
+The FOItemTag class creates dynamic item tags in an office setting, extending the functionality of basic dynamic item tags.
 
-```
-FIKA-[Product Type]-[Specifications]-[Dimensions]
-```
+### Key Features:
 
-Components:
-1. **FIKA**: Prefix consistent across all products in the FIKA line.
-2. **Product Type**: Indicates the category of the product.
-3. **Specifications**: Additional details about the product's features or configuration.
-4. **Dimensions**: The size of the product, typically in inches.
+1. **Positioning**: Placement at specific positions in the 3D office layout.
+2. **Rotation**: Alignment with office items or viewing angles.
+3. **Identification**: Association with a unique key for easy management.
 
-## Product Categories
+## FOItemTagInfo
 
-### Cabinets (CAB)
+The FOItemTagInfo class contains information for creating and displaying item tags in an office environment, building upon basic item tag information.
 
-```
-FIKA-CAB-[Type]-[Width][Depth]
-```
+### Key Features:
 
-| Component | Description | Possible Values |
-|-----------|-------------|-----------------|
-| Type | Cabinet configuration | BBF (Box/Box/File), FF (File/File), SBOOO (Single Box, Open/Open/Open) |
-| Width | Cabinet width in inches | 15, 18 |
-| Depth | Cabinet depth in inches | 18, 24, 30 |
+1. **Text Style**: Custom text style for consistency with office design standards.
+2. **Layer Information**: Office-specific drawing layer information for proper display and export.
 
-Example: `FIKA-CAB-BBF-1524` (Box/Box/File cabinet, 15" wide, 24" deep)
+## Tag Behavior and Rules
 
-### Workstations (WS)
+1. **Text Display**:
+   - Displays text associated with an office item.
+   - Default text height is 4 inches, but customizable.
 
-```
-FIKA-WS-[Shape]-[Width][Depth]
-```
+2. **Visibility**:
+   - Depends on current view mode and layer settings.
+   - Can be hidden based on specific export or view settings.
 
-| Component | Description | Possible Values |
-|-----------|-------------|-----------------|
-| Shape | Workstation shape | RECT (Rectangle), ARC (Arc) |
-| Width | Workstation width in inches | 18, 24, 30, 36, etc. |
-| Depth | Workstation depth in inches | 18, 24, 30, 36, etc. |
+3. **Export Behavior**:
+   - Includes tag attributes (text, position, rotation, color).
+   - Considers visibility settings and current view mode.
 
-Example: `FIKA-WS-RECT-3060` (Rectangular workstation, 30" wide, 60" deep)
+4. **Layer Management**:
+   - Associated with specific layers affecting visibility and export behavior.
+   - Determines display in different views or exports.
 
-### Bookcases (BOOK)
+5. **Text Styling**:
+   - Uses custom text style (font, color, size) for consistency with office design standards.
 
-```
-FIKA-BOOK[Height]-[Width][Depth]
-```
+6. **Positioning and Rotation**:
+   - Can be positioned anywhere in the 3D office layout.
+   - Rotatable to align with furniture or face specific viewing angles.
 
-| Component | Description | Possible Values |
-|-----------|-------------|-----------------|
-| Height | Number of shelves | 2, 3, 4, 5 |
-| Width | Bookcase width in inches | 24, 30, 36, 42 |
-| Depth | Bookcase depth in inches | 24, 30 |
+7. **Identification**:
+   - Associated with a unique key for easy management and reference.
 
-Example: `FIKA-BOOK3-3024` (Bookcase with 3 shelves, 30" wide, 24" deep)
+## Interaction with Other Office Items
 
-### Lateral Files (LAT)
+- Typically associated with specific office items or areas.
+- May require updates or repositioning when office layouts change.
+- Visibility and appearance may be affected by global office view settings.
 
-```
-FIKA-LAT[Drawers]-[Width][Height]
-```
+## Remarks
 
-| Component | Description | Possible Values |
-|-----------|-------------|-----------------|
-| Drawers | Number of drawers | 1, 15, 2, 3, 4, 5, 6 |
-| Width | Lateral file width in inches | 30, 36, 42 |
-| Height | Lateral file height in inches | 18, 24 |
-
-Example: `FIKA-LAT3-3624` (3-drawer lateral file, 36" wide, 24" high)
-
-### Additional Product Categories
-
-The FIKA product line includes several other categories, each with its own part number logic:
-
-- Overhead storage (OVERHEAD)
-- Tables (TBL)
-- Pedestals (PF)
-- Tiles (TILE)
-- Shelves (SHELF)
-- Towers (TOWER)
-
-Each category follows a similar logic to the examples provided above, with specific components indicating the product's unique features and dimensions.
-
-## Configuration Logic
-
-### FOItemTag
-
-The FOItemTag class is responsible for creating and managing dynamic item tags in an office setting.
-
-Key Features:
-- Tag Creation: Creates new item tags based on provided information, position, and rotation.
-- Flexibility: Tags can be placed at any specified position in the 3D space of the office layout.
-- Customizable Rotation: Tags can be rotated to any angle for flexible placement and readability.
-- Unique Identification: Each tag can be assigned a unique key for easy reference and management.
-
-### FOItemTagInfo
-
-The FOItemTagInfo class contains detailed information for an office item tag.
-
-Key Features:
-- Text Style: Provides a custom text style for the tag's visual appearance.
-- Tag Content: Stores the text content of the tag, typically describing or identifying the associated office item.
-- Layer Information: Incorporates layer information for organizing and displaying tags in complex office layouts.
-
-### Tag Behavior and Rules
-
-1. Text Height: Default text height is 4 inches, but can be customized.
-2. Layer Management: Tags are associated with specific layers, controlling visibility in the office layout.
-3. Export Functionality: Tags can be exported with attributes including position, rotation, font height, and color.
-4. Visibility Rules: Tag visibility is controlled by view mode, layer settings, and content filters.
-5. Attribute Assignment: Exported tags are assigned various attributes such as prompt, text content, name, position, rotation, font height, and color.
-6. Color Management: Tag text color is determined by either a custom text style or a predefined color associated with the tag's layer.
-
-## Conclusion
-
-Understanding the FIKA part number system and configuration logic allows Interior Designers to efficiently identify, specify, and manage products across the entire FIKA line. When ordering or configuring FIKA products, always use the complete and correct part number to avoid confusion or errors in the procurement process.
-
-The FOItemTag and FOItemTagInfo classes provide a flexible system for creating and managing item tags within office layouts, enhancing the ability to organize and identify FIKA products in complex design scenarios.
+- This documentation is based on provided class information and may not cover all possible use cases or exceptions.
+- Exact tag behavior may depend on specific implementations of related classes and global settings not visible in the provided code.
+- For more detailed information, consult the full system documentation or contact the development team.

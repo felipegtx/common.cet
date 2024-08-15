@@ -1,8 +1,6 @@
-Here's the consolidated document combining the information from both sources:
-
 # Fika Office Library Documentation
 
-This document provides an overview of the Fika Office Library, a collection of furniture and office components for interior design projects. It is designed to be user-friendly for interior designers who may not have programming experience.
+This document describes the functionality and structure of the Fika Office Library, which is a collection of office furniture and accessories that can be configured and placed in a virtual space.
 
 ## Library Structure
 
@@ -17,187 +15,197 @@ The Fika Office Library is organized into several main categories:
 7. Upper Storage
 8. Chairs
 
-Each category contains various components that can be added to a design project.
+Each category contains various products that can be added to the virtual space.
 
-## Components and Features
-
-### Global Settings
-
-- Scheme Selector: Allows users to select different color schemes or design themes.
-- Picklist: A tool for selecting multiple items at once.
-- Material Legend: Provides information about different materials used in the products.
+## Product Categories and Part Numbers
 
 ### Panels
 
-- Panel Frame: The basic structure of a panel.
-- Wall Start: A component to begin a wall of panels.
-- Panel Tile Segment: Allows customization of panel sections.
-- Skin Selection: Options to change the overall look of panels.
-- Material Selection: Choose from fabric, veneer, laminate, markerboard, and glass materials for panels.
-- Panel Type Elevation: Adjust the height and configuration of panels.
-- Panel Manager: A tool for managing multiple panels at once.
+The Panels category includes:
+- Panel Frames
+- Wall Starts
+- Panel Tile Segments
+- Panel Type Elevations
+
+Users can customize panels with different materials:
+- Fabric
+- Veneer
+- Laminate
+- Markerboard
+- Glass
+
+A Panel Manager is available for more advanced configuration options.
+
+Panel part numbers follow this structure:
+
+| Part | Description | Possible Values |
+|------|-------------|-----------------|
+| FIKA | Brand identifier | Always "FIKA" |
+| TILE | Product type | Always "TILE" |
+| XX | Width in inches | 24, 30, 36, 42, 48, 54, 60 |
+| YY | Height in inches | 06, 12, 18, 24, 30, 36, 42, 48, 54, 60 |
+
+Example: FIKA-TILE-3024 (30" wide, 24" high panel tile)
 
 ### Worksurfaces
 
-Worksurfaces are available in various shapes and configurations:
+The Worksurfaces category includes:
+- Rectangular Worksurfaces
+- Arc Front Worksurfaces
+- 90-Degree Corner Worksurfaces
+- 120-Degree Corner Worksurfaces
 
-| Shape | Code |
-|-------|------|
-| Rectangular | RECT |
-| Arc Front | ARC |
-| 90-Degree Corner | 90 |
-| 120-Degree Corner | 120 |
+Worksurface part numbers follow this structure:
 
-Example part numbers:
-- FIKA-WS-RECT-2460: Rectangular worksurface, 24" deep, 60" wide
-- FIKA-WS-ARC-3072: Arc front worksurface, 30" deep, 72" wide
-- FIKA-WS-90-24363624: 90-degree corner worksurface, 24" deep on both sides, 36" wide on both sides
-- FIKA-WS-120-30484830: 120-degree corner worksurface, 30" deep, 48" wide on two sides, 30" on the third side
+| Part | Description | Possible Values |
+|------|-------------|-----------------|
+| FIKA | Brand identifier | Always "FIKA" |
+| WS | Product type (Worksurface) | "WS" |
+| TYPE | Shape type | RECT (Rectangular), ARC (Arc Front), 90 (90-Degree), 120 (120-Degree) |
+| XX | Width in inches | Various sizes (18-96) |
+| YY | Depth in inches | Various sizes (18-48) |
+
+Examples:
+- FIKA-WS-RECT-3060 (30" x 60" rectangular worksurface)
+- FIKA-WS-ARC-3660 (36" x 60" arc front worksurface)
+- FIKA-WS-90-24363624 (24" x 36" x 36" x 24" 90-degree corner worksurface)
+- FIKA-WS-120-30424230 (30" x 42" x 42" x 30" 120-degree corner worksurface)
 
 ### Supports
 
-- Auto Supports: An option to automatically add supports to worksurfaces.
-- Add Cantilever: Manually add a cantilever support.
-- Remove Support: Remove an existing support.
-- Default Supports: Reset supports to their default configuration.
+The Supports category allows users to:
+- Enable or disable automatic supports
+- Add cantilever supports
+- Remove supports
+- Reset supports to default configuration
 
-Example part number:
-- FIKA-CANTILEVER-DBL: Double cantilever support
+Support part numbers:
+
+- FIKA-CANTILEVER-LH (Left-hand cantilever support)
+- FIKA-CANTILEVER-RH (Right-hand cantilever support)
+- FIKA-CANTILEVER-DBL (Double cantilever support)
 
 ### Tables
 
-Tables are available in rectangular and round shapes:
+The Tables category includes:
+- Rectangular Tables
+- Round Tables
 
-| Shape | Code |
-|-------|------|
-| Rectangular | FSRECT |
-| Round | FSROUND |
+Table part numbers follow this structure:
 
-Example part numbers:
-- FIKA-TBL-FSRECT-3642: Rectangular table, 36" deep, 42" wide
-- FIKA-TBL-FSROUND-48: Round table, 48" diameter
+| Part | Description | Possible Values |
+|------|-------------|-----------------|
+| FIKA | Brand identifier | Always "FIKA" |
+| TBL | Product type (Table) | "TBL" |
+| SHAPE | Table shape | FSRECT (Freestanding Rectangular), FSROUND (Freestanding Round) |
+| XX | Width/Diameter in inches | Various sizes (30-84) |
+| YY | Depth in inches (for rectangular tables) | 36, 42 |
+
+Examples:
+- FIKA-TBL-FSRECT-6036 (60" x 36" rectangular table)
+- FIKA-TBL-FSROUND-48 (48" diameter round table)
 
 ### Low Storage
 
-#### Cabinets (CAB)
+The Low Storage category includes:
+- Lateral File Cabinets
+- Bookcases
+- Pedestals
+- Bookcase Towers
 
-Cabinets are available in different configurations:
+Low storage part numbers follow these structures:
 
-| Configuration | Code | Description |
-|---------------|------|-------------|
-| Box/Box/File  | BBF  | Two box drawers and one file drawer |
-| File/File     | FF   | Two file drawers |
-| Open Storage  | SBOOO| Single open storage compartment |
+Lateral File Cabinets:
+| Part | Description | Possible Values |
+|------|-------------|-----------------|
+| FIKA | Brand identifier | Always "FIKA" |
+| LAT | Product type (Lateral File) | "LAT" |
+| X | Number of drawers | 1-6 |
+| XX | Width in inches | 30, 36, 42 |
+| YY | Height in inches | 18, 24 |
 
-Example part numbers:
-- FIKA-CAB-BBF-1518: Cabinet with Box/Box/File configuration, 15" wide, 18" deep
-- FIKA-CAB-FF-1824: Cabinet with File/File configuration, 18" wide, 24" deep
+Example: FIKA-LAT3-3624 (3-drawer lateral file, 36" wide, 24" high)
 
-Available sizes: 15" or 18" wide, 18", 24", or 30" deep
+Bookcases:
+| Part | Description | Possible Values |
+|------|-------------|-----------------|
+| FIKA | Brand identifier | Always "FIKA" |
+| BOOK | Product type (Bookcase) | "BOOK" |
+| X | Number of shelves | 2-5 |
+| XXYY | Width and Height in inches | Various sizes |
 
-#### Bookcases (BOOK)
-
-Bookcases are available in various heights:
-
-| Height | Code |
-|--------|------|
-| 2-high | BOOK2|
-| 3-high | BOOK3|
-| 4-high | BOOK4|
-| 5-high | BOOK5|
-
-Example part number:
-- FIKA-BOOK3-2430: 3-high bookcase, 24" wide, 30" deep
-
-Available sizes: 24", 30", 36", or 42" wide; 24" or 30" deep
-
-#### Lateral Files (LAT)
-
-Lateral files are available in different heights:
-
-| Height | Code |
-|--------|------|
-| 1-high | LAT1 |
-| 1.5-high | LAT15 |
-| 2-high | LAT2 |
-| 3-high | LAT3 |
-| 4-high | LAT4 |
-| 5-high | LAT5 |
-| 6-high | LAT6 |
-
-Example part number:
-- FIKA-LAT3-3618: 3-high lateral file, 36" wide, 18" deep
-
-Available sizes: 30", 36", or 42" wide; 18" or 24" deep
-
-#### Storage Towers
-
-Storage towers combine different storage options:
-
-Example part numbers:
-- FIKA-TOWER-4BBF-1524-L: 4-high tower with Box/Box/File configuration, 15" wide, 24" deep, left-handed
-- FIKA-TOWER-5FF-1530-R: 5-high tower with File/File configuration, 15" wide, 30" deep, right-handed
+Example: FIKA-BOOK3-3630 (3-shelf bookcase, 36" wide, 30" high)
 
 ### Upper Storage
 
-#### Overhead Storage (OVERHEAD)
+The Upper Storage category includes:
+- Overhead Cabinets
+- Shelves
 
-Example part numbers:
-- FIKA-OVERHEAD-3614: Overhead storage, 36" wide, 14" high
-- FIKA-OVERHEAD-4214-OPEN: Open overhead storage, 42" wide, 14" high
+Upper storage part numbers follow these structures:
 
-#### Shelf
+Overhead Cabinets:
+| Part | Description | Possible Values |
+|------|-------------|-----------------|
+| FIKA | Brand identifier | Always "FIKA" |
+| OVERHEAD | Product type | "OVERHEAD" |
+| XX | Width in inches | 30, 36, 42, 48, 54, 60 |
+| YY | Height in inches | Always 14 |
+| OPEN | Optional open shelf indicator | "OPEN" or omitted |
 
-Example part number:
-- FIKA-SHELF-3009: Shelf, 30" wide, 9" deep
+Examples:
+- FIKA-OVERHEAD-3614 (36" wide, 14" high overhead cabinet)
+- FIKA-OVERHEAD-4214-OPEN (42" wide, 14" high open overhead cabinet)
+
+Shelves:
+| Part | Description | Possible Values |
+|------|-------------|-----------------|
+| FIKA | Brand identifier | Always "FIKA" |
+| SHELF | Product type | "SHELF" |
+| XX | Width in inches | 24, 30, 36, 42, 48, 54, 60 |
+| YY | Depth in inches | Always 09 |
+
+Example: FIKA-SHELF-3609 (36" wide, 9" deep shelf)
 
 ### Chairs
 
-- Office Chair
+The Chairs category allows users to add office chairs to the space.
 
-Example part number:
-- FIKA-CHR-01: Office chair, model 01
+Chair part numbers:
+- FIKA-CHR-01 (Standard chair)
+- FIKA-CHR-AR (Chair with arms)
+- FIKA-CHR-HR (Chair with headrest)
 
-## Part Number Structure
+## Configuration Options
 
-All part numbers in the Fika Office Library follow this general structure:
+### Auto Supports
 
-```
-FIKA-[Category]-[Specifics]-[Dimensions]
-```
+Users can toggle automatic support generation for worksurfaces. When enabled, the system will automatically add necessary supports. When disabled, users can manually add or remove supports as needed.
 
-- FIKA: The brand identifier, present in all part numbers.
-- Category: Indicates the product category (e.g., CAB for cabinet, WS for worksurface).
-- Specifics: Provides additional details about the product type or configuration.
-- Dimensions: Represents the size of the product, typically in inches.
+### Material Selection
 
-## Functionality
+For panels and possibly other products, users can select from various materials including fabric, veneer, laminate, markerboard, and glass. This allows for customization of the appearance of the office furniture.
 
-1. **Auto Supports**: When enabled, the system automatically adds necessary supports to worksurfaces. This can be toggled on or off.
+### Panel Manager
 
-2. **Adding Cantilever**: Users can manually add cantilever supports to worksurfaces.
+A dedicated Panel Manager is available for more detailed configuration of panel systems. This tool likely allows for advanced customization of panel layouts and properties.
 
-3. **Removing Supports**: This function allows for the removal of existing supports from worksurfaces.
+### Scheme Selection
 
-4. **Resetting Supports**: This option resets all supports on worksurfaces to their default configuration.
+Users can access a scheme selector, which may allow for saving and loading different configuration presets or color schemes for the office layout.
 
-5. **Panel Customization**: Users can change materials, colors, and configurations of panels using the various tools provided.
+## Interaction Methods
 
-6. **Scheme Selection**: Different color schemes or design themes can be applied to the entire project.
+The library uses various interaction methods for product placement and configuration:
 
-## Notes for Interior Designers
+- Snapper: Used for placing individual items like worksurfaces, tables, and storage units.
+- Animation: Used for more complex actions like configuring panel tile segments or applying materials.
+- Callback: Used for actions like toggling auto supports or managing supports.
 
-- The library is designed to be intuitive, with visual representations (icons) for each component.
-- Components can be easily added to your design by selecting them from their respective categories.
-- The Panel Manager allows for bulk editing of multiple panels, saving time in large projects.
-- Always check the Material Legend to ensure you're using the correct materials for each component.
-- The Auto Supports feature can save time, but manual adjustment may be necessary for unique designs.
-- When specifying products for a project, use the full part number to ensure accuracy.
-- Not all size combinations are available for every product type. Always refer to the official product catalog or consult with a Fika representative to confirm availability and compatibility of specific part numbers.
+## Notes
 
-Remember, this library is a tool to assist in your design process. Feel free to experiment with different combinations of components and settings to achieve the desired look for your office design projects.
+- The library checks for the presence of a specific catalog ("FIKA") before loading. If the catalog is missing, a simplified version of the library is presented.
+- There are developer tools available in non-release mode, which are not accessible to end-users.
+- The library uses a consistent icon size for most products (30x44 pixels) to maintain a uniform appearance in the interface.
 
-## Remarks and Disclaimers
-
-- This documentation combines information from multiple sources and may not include all features of the Fika Office Library.
-- The actual appearance and functionality of the library may vary depending on the user interface implementation.
+This documentation provides an overview of the Fika Office Library's structure, functionality, and part

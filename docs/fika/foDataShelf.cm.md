@@ -1,18 +1,18 @@
-Here's the consolidated document combining the information from both sources:
+Here's the consolidated document that combines the information from both sources while removing redundancies and maintaining clarity:
 
 # FIKA Office Shelf Documentation
 
 ## Product Overview
 
-This document describes the configuration logic and part number structure for the FIKA Office Shelf, a panel-hung shelf product. The shelf is designed to be mounted on a panel and comes in various widths to accommodate different space requirements.
+This document describes the configuration logic and part number structure for the FIKA Office Shelf, a wall-mounted shelf designed for office environments.
 
 ## Dimensions
 
 The FIKA Office Shelf is available in the following dimensions:
 
 - **Width**: 24", 30", 36", 42", 48", 54", or 60"
-- **Depth**: 9" (fixed)
-- **Height**: 4" (fixed)
+- **Depth**: 9"
+- **Height**: 4"
 
 The default width for this shelf is 30 inches.
 
@@ -21,62 +21,61 @@ The default width for this shelf is 30 inches.
 The part number for the FIKA Office Shelf follows this format:
 
 ```
-FIKA-SHELF-[Width][Depth]
+FIKA-SHELF-[Width in inches][Depth in inches]
 ```
 
-Where:
-- [Width] is the width of the shelf in inches (two digits)
-- [Depth] is the depth of the shelf in inches (two digits)
-
-### Part Number Breakdown
+Here's a table explaining the structure of the part number:
 
 | Component | Description | Possible Values |
 |-----------|-------------|-----------------|
-| FIKA      | Product line identifier | Fixed value |
-| SHELF     | Product type identifier | Fixed value |
-| Width     | Width of the shelf in inches | 24, 30, 36, 42, 48, 54, 60 |
-| Depth     | Depth of the shelf in inches | 09 (fixed) |
+| FIKA      | Brand identifier | Always "FIKA" |
+| SHELF     | Product type | Always "SHELF" |
+| Width     | Width in inches | 24, 30, 36, 42, 48, 54, 60 |
+| Depth     | Depth in inches | Always 09 |
 
-### Valid Part Numbers
+Valid part numbers for the FIKA Office Shelf are:
 
-Here's a complete list of valid part numbers for the FIKA Office Shelf:
+- FIKA-SHELF-2409
+- FIKA-SHELF-3009
+- FIKA-SHELF-3609
+- FIKA-SHELF-4209
+- FIKA-SHELF-4809
+- FIKA-SHELF-5409
+- FIKA-SHELF-6009
 
-1. FIKA-SHELF-2409
-2. FIKA-SHELF-3009
-3. FIKA-SHELF-3609
-4. FIKA-SHELF-4209
-5. FIKA-SHELF-4809
-6. FIKA-SHELF-5409
-7. FIKA-SHELF-6009
+For example:
+- A shelf that is 30 inches wide and 9 inches deep would have the part number: `FIKA-SHELF-3009`
+- A shelf that is 48 inches wide and 9 inches deep would have the part number: `FIKA-SHELF-4809`
+
+## Placement and Interaction
+
+The FIKA Office Shelf is designed to be wall-mounted. When placing the shelf in a design:
+
+1. The shelf will be positioned at a specific elevation on the wall. This elevation is predetermined and consistent for all shelves of this type.
+2. The shelf can be snapped into place using connectors. When snapped, the shelf will automatically adjust its position to align properly with other elements in the design.
+3. After snapping, the shelf's data will be synchronized to ensure all information is up-to-date and consistent with its new position.
 
 ## Configuration Rules and Constraints
 
-1. **Panel Mounting**: The shelf is designed to be hung on a panel. When placing the shelf, it will automatically adjust its elevation to match the panel it's being mounted on.
-
-2. **Snapping Behavior**: The shelf can be snapped to other compatible objects. When snapped, it will automatically update its position and orientation to align properly with the target object.
-
-3. **Width Selection**: Users can choose from the predefined width options (24", 30", 36", 42", 48", 54", or 60"). The system will not allow custom width inputs outside of these options.
-
-4. **Depth and Height**: The depth (9") and height (4") of the shelf are fixed and cannot be changed by the user.
-
-5. **Placement Flexibility**: The shelf can be placed at various heights on the panel, allowing for customizable storage solutions.
+1. **Width Selection**: Users can choose from the predefined width options (24", 30", 36", 42", 48", 54", or 60"). No custom widths are allowed.
+2. **Depth and Height**: The depth (9") and height (4") are fixed and cannot be changed.
+3. **Wall Mounting**: This shelf must be mounted on a wall and cannot be freestanding.
+4. **Elevation**: The shelf will be placed at a specific height on the wall, which is consistent for all shelves of this type.
 
 ## Interaction with Other Products
 
-1. The shelf is designed to work within the FIKA office system and is likely compatible with other FIKA panel-based products.
+The FIKA Office Shelf is designed to work within the FIKA office system. While specific interactions with other products are not detailed in this document, it's important to note:
 
-2. When placing the shelf, consider the height and width of the panel it will be mounted on to ensure proper fit and functionality.
-
-3. Take into account the weight capacity of the shelf when planning to store items on it. (Note: Specific weight capacity information is not provided in the given data)
+1. The shelf can be snapped into place, suggesting it may interact with other wall-mounted elements or support systems.
+2. Its consistent elevation implies it may be part of a larger shelving or storage system designed to work at specific heights.
 
 ## Additional Notes
 
-- The shelf's graphics will be displayed at the appropriate elevation based on where it's placed on the panel.
-- After snapping the shelf to another object, the system will automatically synchronize the shelf's data to ensure consistency with its new position and orientation.
+- The shelf's data is synchronized after snapping, ensuring that all related components or systems are updated with the shelf's final position and configuration.
+- The graphical representation of the shelf in design software will be positioned based on its elevation, allowing for accurate visualization in office layouts.
 
 ## Remarks and Disclaimers
 
-- The information provided is based on the available product data. There may be additional rules or constraints implemented in related products or system-wide settings that are not captured here.
-- Weight capacity and material specifications are not included in the provided data and may be important factors to consider when configuring office spaces.
-- Always refer to the latest product specifications and installation guidelines when planning and implementing office layouts using this shelf.
-- The part numbers listed in this document are the only valid configurations for the FIKA Office Shelf. Any other combinations are not supported.
+- This documentation is based on the provided information. There may be additional rules, constraints, or interactions defined in other related configuration files that are not captured here.
+- The exact elevation at which the shelf is mounted is not specified. This information may be defined elsewhere in the system or may be a standard value known to the design team.
+- The snapping behavior and its implications on shelf placement may have more nuanced rules that are not fully captured in this document.

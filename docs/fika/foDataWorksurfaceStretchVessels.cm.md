@@ -1,90 +1,85 @@
+Here's the consolidated document combining the information from both sources:
+
 # 120-Degree Worksurface Stretch Vessel Documentation
 
-This document describes the functionality, behavior, and part number structure of the 120-Degree Worksurface Stretch Vessel, a component used in office furniture configurations.
+This document describes the functionality and behavior of the 120-Degree Worksurface Stretch Vessel, which is a component used in office furniture configuration.
 
-## Product Overview
+## Overview
 
-The 120-Degree Worksurface Stretch Vessel is a specialized worksurface designed to fit into 120-degree corner configurations. It includes features for stretching and adjusting its dimensions, as well as visual indicators to guide users during the configuration process.
+The 120-Degree Worksurface Stretch Vessel is a specialized type of worksurface that extends the capabilities of a standard worksurface stretch vessel. It is designed to work with 120-degree corner surfaces, providing specific positioning for stretch-related visual elements.
 
-## Part Number Structure
+## Part Numbers
 
-The part numbers for the 120-Degree Worksurface Stretch Vessel follow a specific structure:
+The 120-Degree Worksurface Stretch Vessel is part of the FIKA product line. The relevant part numbers for this product are:
 
-| Component | Description | Possible Values |
-|-----------|-------------|-----------------|
-| Prefix    | Product line identifier | FIKA-WS-120- |
-| Depth     | Worksurface depth | 18, 24, 30 |
-| Width 1   | First width dimension | 36, 42, 48 |
-| Width 2   | Second width dimension | 36, 42, 48 |
-| Width 3   | Third width dimension | 18, 24, 30 |
+| Part Number | Description |
+|-------------|-------------|
+| FIKA-WS-120-18363618 | 120-Degree Worksurface, 36"x36"x18" |
+| FIKA-WS-120-18424218 | 120-Degree Worksurface, 42"x42"x18" |
+| FIKA-WS-120-18484818 | 120-Degree Worksurface, 48"x48"x18" |
+| FIKA-WS-120-24363624 | 120-Degree Worksurface, 36"x36"x24" |
+| FIKA-WS-120-24484824 | 120-Degree Worksurface, 48"x48"x24" |
+| FIKA-WS-120-30363630 | 120-Degree Worksurface, 36"x36"x30" |
+| FIKA-WS-120-30424230 | 120-Degree Worksurface, 42"x42"x30" |
+| FIKA-WS-120-30484830 | 120-Degree Worksurface, 48"x48"x30" |
 
-Example part numbers:
-- FIKA-WS-120-18363618
-- FIKA-WS-120-24484824
-- FIKA-WS-120-30424230
+The part number structure can be broken down as follows:
 
-Valid part numbers:
+| Prefix | Product Type | Angle | Depth | Width 1 | Width 2 | Height |
+|--------|--------------|-------|-------|---------|---------|--------|
+| FIKA   | WS (Worksurface) | 120 | 18/24/30 | 36/42/48 | 36/42/48 | 18/24/30 |
 
-| Part Number | Depth | Width 1 | Width 2 | Width 3 |
-|-------------|-------|---------|---------|---------|
-| FIKA-WS-120-18363618 | 18 | 36 | 36 | 18 |
-| FIKA-WS-120-18424218 | 18 | 42 | 42 | 18 |
-| FIKA-WS-120-18484818 | 18 | 48 | 48 | 18 |
-| FIKA-WS-120-24363624 | 24 | 36 | 36 | 24 |
-| FIKA-WS-120-24484824 | 24 | 48 | 48 | 24 |
-| FIKA-WS-120-30363630 | 30 | 36 | 36 | 30 |
-| FIKA-WS-120-30424230 | 30 | 42 | 42 | 30 |
-| FIKA-WS-120-30484830 | 30 | 48 | 48 | 30 |
+For example, FIKA-WS-120-30484830 represents a 120-degree worksurface with a depth of 30", widths of 48" on both sides, and a height of 30".
 
-## Visual Indicators
+## Functionality
 
-### Text Position
+### Stretch Text Position
 
-The product includes a text indicator for configuration guidance:
+The stretch text position is determined based on the following logic:
 
-- 6 inches to the left of the worksurface's left edge
-- 12 inches below the worksurface
-- 1 inch above the top surface of the worksurface
+- If a 120-degree corner surface is present:
+  - The text is positioned 6 inches to the left of the left edge of the surface
+  - It is placed 12 inches below the surface
+  - The text appears 1 inch above the top of the worksurface
 
-The text indicator is not displayed if the worksurface is improperly configured or unrecognized.
+- If no surface is detected, the text will not be displayed
 
-### Arrow Position
+### Stretch Arrow Position
 
-An arrow indicator guides users during configuration:
+The stretch arrow position is calculated using these rules:
 
-1. When connected to another component:
-   - For right side or front edge connections:
-     - Linear component connections: Arrow at the end of the connection line
-     - Other connections: Arrow at the connection point
-   - Always 1 inch above the worksurface top surface
-
-2. Not displayed if the worksurface is unconnected or improperly configured
+1. The system checks for both a 120-degree corner surface and a connection point (snap)
+2. If both are present:
+   - For connection points on the right side or front edge:
+     - If the connection is a line, the arrow is placed at the end of the line
+     - Otherwise, it's placed at the connection point itself
+   - The arrow always appears 1 inch above the top of the worksurface
+3. If either the surface or connection point is missing, no arrow will be displayed
 
 ## Interaction with Other Components
 
-The worksurface connects to other office furniture components, primarily at:
+This component is designed to work specifically with 120-degree corner surfaces. It relies on the presence of these surfaces to properly position its visual elements (text and arrows).
 
-- Right side edge (identified as "rs")
-- Front edge (identified as "f0")
-
-These connection points enable integration into larger office layouts.
+The component also interacts with connection points, particularly those on the right side and front edge of the surface. These connection points influence the positioning of the stretch arrow.
 
 ## Dimensions and Measurements
 
-- Depth: 18", 24", or 30"
-- Width: Combinations of 36", 42", and 48" (refer to part number table)
-- Height: Not specified in part number, but has a measurable top surface height ("worksurfaceTop")
+The component uses the following measurements:
+
+- 6 inches: Used to offset the text position from the left edge of the surface
+- 12 inches: Used to position the text below the surface
+- 1 inch: The height above the worksurface where both text and arrows are displayed
+
+Available dimensions for the worksurface itself can be found in the part number table above.
+
+## Rules and Constraints
+
+1. The stretch text and arrow will only be displayed if a valid 120-degree corner surface is detected
+2. The arrow position is dependent on the presence and type of connection points
+3. All visual elements (text and arrows) are positioned 1 inch above the worksurface top
 
 ## Remarks and Disclaimers
 
-1. Always refer to the most current product catalog or specification sheet for the complete list of available configurations.
-
-2. Product invalidation rules may be defined in separate validation modules or configuration guidelines.
-
-3. Additional features or constraints may exist in other parts of the system not visible in this documentation.
-
-4. The positioning logic assumes a coordinate system where positive Y is upward and positive X is to the right. Confirm this with full product documentation.
-
-5. Consult the latest product specifications and installation guides for the most accurate and up-to-date information on product features, dimensions, and configuration options.
-
-6. Exact ranges and increments for height adjustments should be specified in separate product documentation.
+- This documentation covers the basic functionality of the 120-Degree Worksurface Stretch Vessel
+- The exact appearance and behavior of the stretch text and arrows may depend on other components or settings not described in this document
+- For more detailed information or specific configurations, please consult the product manual or contact customer support

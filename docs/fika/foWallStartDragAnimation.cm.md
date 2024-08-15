@@ -1,87 +1,46 @@
+Since there is no information provided in the "Part Numbers" document, I will consolidate the information from the "Configuration Logic" document into a clear and concise final document. Here's the consolidated documentation:
+
 # Wall Start Drag Animation Documentation
+
+This document describes the behavior and logic of the Wall Start Drag Animation functionality for interior designers. This feature handles the animation and positioning of wall elements during the dragging process in the design space.
 
 ## Overview
 
-This document describes the behavior, logic, and part numbering system of the Wall Start Drag Animation feature for the FIKA product line. This feature allows interior designers to drag and position wall elements within a space, with various alignment and snapping capabilities.
+The Wall Start Drag Animation occurs when you start dragging a wall element in your design. It manages the positioning, rotation, and snapping of the wall element as you move it around the space.
 
-## Part Numbers
+## Key Features
 
-The part numbers for the FIKA product line follow a specific structure:
+### Wall Alignment
 
-```
-FIKA-[Product Type]-[Specifications]-[Dimensions]
-```
+The animation includes a wall alignment feature that helps position the wall element correctly in relation to other surfaces in the design space.
 
-### Product Types and Part Number Structure
+### Main Position and Rotation
 
-| Product Type | Format | Example |
-|--------------|--------|---------|
-| Cabinets (CAB) | FIKA-CAB-[Type]-[WWDD] | FIKA-CAB-BBF-1518 |
-| Bookcases (BOOK) | FIKA-BOOK[X]-[WWDD] | FIKA-BOOK3-2430 |
-| Lateral Files (LAT) | FIKA-LAT[X]-[WWDD] | FIKA-LAT2-3624 |
-| Overhead Storage | FIKA-OVERHEAD-[WWDD](-OPEN) | FIKA-OVERHEAD-3614-OPEN |
-| Platforms (PF) | FIKA-PF-[WWDD] | FIKA-PF-3042 |
-| Shelves (SHELF) | FIKA-SHELF-[WWDD] | FIKA-SHELF-3609 |
-| Tables (TBL) | FIKA-TBL-[Type]-[Dimensions] | FIKA-TBL-FSRECT-3636 |
-| Tiles (TILE) | FIKA-TILE-[WWDD] | FIKA-TILE-3030 |
-| Towers (TOWER) | FIKA-TOWER-[Type]-[WWDD]-[L/R] | FIKA-TOWER-4BBF-1518-L |
-| Workstations (WS) | FIKA-WS-[Type]-[Dimensions] | FIKA-WS-RECT-2448 |
+- The wall element's position is continuously updated based on mouse movement.
+- The system calculates the best position, considering whether you're in 2D or 3D view.
+- The initial rotation is set based on the wall's original orientation in the design space.
 
-Where:
-- [X] represents the number of drawers or shelves
-- [WW] is the width in inches
-- [DD] is the depth in inches
-- [L/R] indicates Left or Right orientation (for Towers)
-- [Type] varies by product (e.g., BBF for Box/Box/File cabinets, RECT for rectangular workstations)
+### Snapping Behavior
 
-For specific product types, dimensions, and configurations, please refer to the product catalog or contact the product development team.
+1. The system checks if snapping should be allowed or skipped.
+2. If allowed, it searches for suitable snap points.
+3. If a valid snap point is found, the wall element automatically aligns to it.
+4. If no valid snap point is found, the wall element returns to its previous position.
 
-## Positioning and Rotation
+### Vessel Updates
 
-When dragging a wall element:
+The animation updates "vessels" (helper objects or visual aids) that assist during the wall placement process. These helpers may become active or inactive depending on successful snapping.
 
-1. The element's position is determined by the current mouse position.
-2. The element maintains its original rotation.
+### Continuous Updates
 
-## Wall Alignment and Snapping Behavior
+The system continuously updates the wall element's position, checks for snap points, and refreshes the visual display for a smooth dragging experience.
 
-The system attempts to align the wall element with existing wall surfaces and can snap to other objects in the space:
+### Properties Synchronization
 
-1. If alignment with a wall is possible, the element will align accordingly.
-2. If alignment is not possible, the element will be positioned at the current mouse location.
-3. Snapping to other objects follows these rules:
-   - Snapping may be disabled under certain conditions.
-   - If allowed, the system searches for suitable snap points.
-   - If a snap is found, the element is positioned at the snap point.
-   - If no snap is found, the element returns to its original position.
-4. After snapping, the system:
-   - Updates the position of all connected elements.
-   - Aligns any other elements that were snapped during the animation.
-
-## Movement Aid
-
-A movement aid helper is available to assist with positioning:
-
-- Deactivated when the element is snapped to another object.
-- Activated when the element is not snapped, providing additional guidance.
-
-## Updating the View
-
-After each change in position or snapping:
-
-1. The wall element's properties are updated if necessary.
-2. The view is refreshed to show the new position.
-3. The focus point is updated to keep the element in view.
-
-## Interaction with Other Elements
-
-When dragging a wall element:
-
-1. Other elements in the space may be affected by the movement.
-2. Connected elements move along with the dragged wall element.
-3. The system continuously checks for potential conflicts or connections with other elements.
+The animation keeps track of various wall element properties and ensures they are synchronized with its visual representation.
 
 ## Remarks and Disclaimers
 
-- This documentation may not cover all possible scenarios or edge cases.
-- For more detailed information about specific product rules, dimensions, or part numbers, please consult the product-specific documentation or contact the development team.
+- This documentation focuses on the logical behavior of the Wall Start Drag Animation.
+- The exact visual representation may vary depending on the user interface and graphics capabilities of the design software.
+- Specific rules for wall placement and snapping may be influenced by other components of the design system not covered in this document.

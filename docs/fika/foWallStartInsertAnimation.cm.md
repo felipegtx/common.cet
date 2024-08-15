@@ -1,77 +1,38 @@
-Here's the consolidated document combining the information from both sources:
+Based on the provided documents, I will consolidate the information into a single, clear, and concise document. Since there is no information in the Part Numbers document, the consolidated document will be based entirely on the Configuration Logic document.
 
 # FIKA Office Wall Start Insert Animation
 
-## Overview
+This document describes the logic and behavior of the Wall Start Insert Animation for FIKA Office products. This animation is used when placing wall-mounted products in an office environment.
 
-This document describes the logic and behavior of the Wall Start Insert Animation for FIKA Office products. This animation is used when placing a product against a wall in an office environment.
+## Product Placement and Wall Alignment
 
-## Part Number Logic
+The Wall Start Insert Animation is designed to help users place wall-mounted products correctly in relation to walls in the office space. Its main feature is the ability to align products with wall surfaces, ensuring that wall-mounted products are placed flush against the wall for a neat and professional appearance.
 
-FIKA Office products use a standardized part numbering system. The part numbers are structured to provide information about the product type, dimensions, and other characteristics. Here's a breakdown of the part number structure:
+### Alignment Process
 
-| Component | Description | Example Values |
-|-----------|-------------|----------------|
-| Prefix    | Always "FIKA-" | FIKA- |
-| Product Type | Indicates the type of product | WS (Workstation), CAB (Cabinet), BOOK (Bookcase), LAT (Lateral File), etc. |
-| Variant | Specific variant or configuration | RECT (Rectangle), ARC (Arc), BBF (Box/Box/File), FF (File/File), etc. |
-| Dimensions | Width and depth in inches | 3036 (30" wide, 36" deep) |
-| Additional Info | Optional, varies by product type | L (Left), R (Right), OPEN, etc. |
+1. The animation activates when a user begins to insert a wall-mounted product.
+2. As the user moves the mouse, the animation continuously checks for nearby wall surfaces.
+3. If a suitable wall surface is detected, the product automatically aligns itself to that surface in real-time.
 
-### Example Part Numbers
+### Mouse Interaction
 
-1. Workstation: `FIKA-WS-RECT-3036`
-2. Cabinet: `FIKA-CAB-BBF-1524`
-3. Lateral File: `FIKA-LAT3-3624`
+The animation responds dynamically to the mouse cursor position:
+- Moving closer to a wall triggers the alignment feature.
+- Moving away from walls allows for free placement of the product.
 
-## Valid Product Types for Wall Start Insert Animation
+### Fallback Behavior
 
-The following product types are compatible with the Wall Start Insert Animation:
+If no suitable wall surface is found, the animation defaults to a standard insertion behavior, ensuring products can still be placed in areas without walls.
 
-1. Workstations (WS)
-2. Cabinets (CAB)
-3. Bookcases (BOOK)
-4. Lateral Files (LAT)
-5. Overhead Storage (OVERHEAD)
-6. Towers (TOWER)
+## User Experience Considerations
 
-For a complete list of valid part numbers, please refer to the product catalog or database.
-
-## Alignment Behavior
-
-When inserting a product near a wall, the system attempts to align it with the wall surface. This alignment process considers the current position of the mouse cursor and the selected product.
-
-- The system continuously checks if the product can be aligned with a nearby wall surface.
-- If alignment is possible, the product will snap to the wall.
-- If alignment is not possible, the product will follow the standard insertion behavior.
-
-## Interaction with Walls
-
-The product being inserted interacts with walls in the following ways:
-
-1. It attempts to detect nearby wall surfaces.
-2. When a suitable wall is detected, the product tries to align itself with that wall.
-3. The alignment considers the orientation and position of the wall.
-
-## Mouse Interaction
-
-The position of the mouse cursor plays a crucial role in the insertion process:
-
-- The system constantly monitors the mouse position.
-- The current mouse position is used to determine if wall alignment is possible.
-- If the mouse is moved away from a wall, the product may detach from the wall alignment.
-
-## Standard Insertion Behavior
-
-If the product cannot be aligned with a wall, it will revert to the standard insertion behavior:
-
-- The product will follow the mouse cursor freely.
-- It can be placed anywhere in the office space without snapping to any surface.
+- Simplifies accurate placement of wall-mounted products.
+- Reduces need for manual adjustments, improving design workflow.
+- Provides real-time visual feedback for product positioning.
 
 ## Remarks and Disclaimers
 
-- The exact dimensions for each product are encoded in their respective part numbers.
-- Specific rules for interaction with other products may vary depending on the product type and should be referenced in the individual product documentation.
-- While this document provides an overview of the part numbering system, always refer to the most up-to-date product catalog for the complete list of valid part numbers and their specifications.
-
-For more detailed information about specific product dimensions, part numbers, and interaction rules, please refer to the documentation of individual product classes or consult the FIKA Office product catalog.
+- This documentation covers the general behavior of the Wall Start Insert Animation.
+- Specific product dimensions, part numbers, and interaction rules with other products are not covered in this class.
+- The exact visual representation may vary depending on the product and office environment settings.
+- Additional product-specific rules or constraints may apply during insertion.

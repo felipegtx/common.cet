@@ -4,38 +4,7 @@ Here's the consolidated document combining the information from both sources:
 
 ## Product Overview
 
-The FIKA Arc Front Worksurface is a specialized type of worksurface with an arced front edge. This unique design offers a more ergonomic and aesthetically pleasing alternative to traditional rectangular worksurfaces.
-
-## Part Number Structure
-
-The part number for the Arc Front Worksurface follows this structure:
-
-```
-FIKA-WS-ARC-DDWW
-```
-
-Where:
-- FIKA: Product line identifier
-- WS: Worksurface indicator
-- ARC: Arc front design indicator
-- DD: Depth in inches (24, 30, or 36)
-- WW: Width in inches (18 to 96, in 6-inch increments)
-
-## Available Configurations
-
-The FIKA Arc Front Worksurface is available in the following configurations:
-
-| Depth (inches) | Width Range (inches) | Part Number Format |
-|----------------|----------------------|---------------------|
-| 24 | 18 - 96 | FIKA-WS-ARC-24WW |
-| 30 | 18 - 96 | FIKA-WS-ARC-30WW |
-| 36 | 18 - 96 | FIKA-WS-ARC-36WW |
-
-Where WW represents the width in inches, available in 6-inch increments (18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84, 90, 96).
-
-### Valid Part Numbers
-
-For a comprehensive list of all valid part numbers, please refer to the official product catalog.
+The FIKA Arc Front Worksurface is a specialized type of worksurface with an arced front edge. This unique design offers a curved workspace, providing a distinctive aesthetic and functional appeal in office environments.
 
 ## Dimensions and Configurations
 
@@ -48,32 +17,85 @@ The Arc Front Worksurface is available in three depth options:
 These depth measurements represent the distance from the back edge to the deepest point of the arc at the front.
 
 ### Width Options
-The Arc Front Worksurface is available in widths ranging from 18 inches to 96 inches, in 6-inch increments. This provides a wide range of options to suit various workspace requirements.
+The Arc Front Worksurface is available in the following width options:
+- 18 inches
+- 24 inches
+- 30 inches
+- 36 inches
+- 42 inches
+- 48 inches
+- 54 inches
+- 60 inches
+- 66 inches
+- 72 inches
+- 78 inches
+- 84 inches
+- 90 inches
+- 96 inches
 
-### Arc Design
-The front edge of the worksurface features an arc that spans 200 degrees. This creates a gentle curve that extends across the entire front of the worksurface.
+## Part Number Structure
 
-## Product Features and Interactions
+The part number for the FIKA Arc Front Worksurface follows this structure:
 
-1. **Connectivity**: The arc front edge can be connected to other components for flexible configurations.
+```
+FIKA-WS-ARC-[Width][Depth]
+```
 
-2. **Stretching**: The arc front edge is stretchable, allowing for customization within certain limits.
+Where:
+- "FIKA" represents the product line
+- "WS" stands for Worksurface
+- "ARC" indicates the Arc Front design
+- [Width] is the width in inches (two digits)
+- [Depth] is the depth in inches (two digits)
 
-3. **Depth Adjustment**: Users can modify the depth through stretching, inserting, or dragging operations. This feature is lockable.
+| Component | Description | Possible Values |
+|-----------|-------------|-----------------|
+| FIKA      | Product line | FIKA |
+| WS        | Worksurface | WS |
+| ARC       | Arc Front design | ARC |
+| Width     | Width in inches | 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84, 90, 96 |
+| Depth     | Depth in inches | 24, 30, 36 |
 
-4. **Group Modifications**: Option to modify all connected components simultaneously when adjusting depth.
+### Valid Part Numbers
 
-5. **Disconnection Prevention**: Safeguard to prevent accidental disconnection of all components during adjustments.
+Here's a list of all valid part numbers for the FIKA Arc Front Worksurface:
 
-6. **Thick Front Edge**: The arc front edge is designed with a thicker line type for improved durability and aesthetics.
+```
+FIKA-WS-ARC-2418, FIKA-WS-ARC-2424, FIKA-WS-ARC-2430, FIKA-WS-ARC-2436, FIKA-WS-ARC-2442, FIKA-WS-ARC-2448, FIKA-WS-ARC-2454, FIKA-WS-ARC-2460, FIKA-WS-ARC-2466, FIKA-WS-ARC-2472, FIKA-WS-ARC-2478, FIKA-WS-ARC-2484, FIKA-WS-ARC-2490, FIKA-WS-ARC-2496, FIKA-WS-ARC-3018, FIKA-WS-ARC-3024, FIKA-WS-ARC-3030, FIKA-WS-ARC-3036, FIKA-WS-ARC-3042, FIKA-WS-ARC-3048, FIKA-WS-ARC-3054, FIKA-WS-ARC-3060, FIKA-WS-ARC-3066, FIKA-WS-ARC-3072, FIKA-WS-ARC-3078, FIKA-WS-ARC-3084, FIKA-WS-ARC-3090, FIKA-WS-ARC-3096, FIKA-WS-ARC-3618, FIKA-WS-ARC-3624, FIKA-WS-ARC-3630, FIKA-WS-ARC-3636, FIKA-WS-ARC-3642, FIKA-WS-ARC-3648, FIKA-WS-ARC-3654, FIKA-WS-ARC-3660, FIKA-WS-ARC-3666, FIKA-WS-ARC-3672, FIKA-WS-ARC-3678, FIKA-WS-ARC-3684, FIKA-WS-ARC-3690, FIKA-WS-ARC-3696
+```
 
-7. **Mirroring Support**: Functionality for mirroring to create symmetrical workspace layouts.
+## Product Features and Behavior
 
-8. **Compatibility**: Designed to be compatible with other products in the FIKA office line.
+1. **Arced Front Edge**: The worksurface features a curved front edge, creating an arc that spans 200 degrees. This unique design element distinguishes it from standard rectangular worksurfaces.
 
-## Remarks
+2. **Stretchable Front Edge**: The front edge of the worksurface can be adjusted or "stretched" to modify its shape or size. This feature allows for customization to fit specific space requirements or design preferences.
 
-- The part number structure provides a clear and logical way to identify specific configurations of the FIKA Arc Front Worksurface.
-- When ordering or specifying this product, ensure to use the correct part number that corresponds to the desired depth and width.
-- The wide range of available sizes allows for great flexibility in workspace design and configuration.
-- Some features mentioned, such as connectivity with other components and stretching capabilities, may have additional rules or limitations not captured in this document. Please refer to the detailed product specifications for more information.
+3. **Depth Adjustment**: The depth of the worksurface can be changed using various methods:
+   - Stretching the front edge
+   - Inserting a new value
+   - Dragging the edge to a new position
+
+4. **Lockable Dimensions**: The depth of the worksurface can be locked to prevent accidental changes once set.
+
+5. **Connectivity**: The worksurface can connect with other office furniture pieces, particularly along its sides. There are specific rules for connections near the edges (within 4 inches of either side), which may affect how it interacts with storage units or other worksurfaces.
+
+6. **Mirror Support**: The worksurface has a mirror support feature, which could be useful for symmetrical configurations or specific design layouts.
+
+## Interaction with Other Products
+
+1. The worksurface can connect with other straight-backed worksurfaces along its sides.
+2. It may interact with storage units, particularly when considering connections near the edges of the worksurface.
+3. The product likely integrates with other FIKA office furniture pieces, though specific details are not provided in the given information.
+
+## Configuration Rules and Constraints
+
+1. The depth must be one of the three specified options (24", 30", or 36").
+2. The width must be one of the specified options (18" to 96" in 6" increments).
+3. Connections with other furniture pieces are governed by specific rules, especially within 4 inches of either side of the worksurface.
+4. The front edge is always curved, forming a 200-degree arc.
+5. The arc resolution (smoothness of the curve) is set at 5 degrees, which determines how the curve is rendered or manufactured.
+
+## Remarks and Disclaimers
+
+- The complete structure of the part number has been inferred from the available information and may be subject to change.
+- There may be additional features or constraints not evident in the provided information, especially regarding integration with other FIKA office products.

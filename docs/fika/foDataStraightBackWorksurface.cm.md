@@ -1,86 +1,108 @@
 # Straight Back Worksurface Documentation
 
-This document describes the functionality, behavior, and part number structure of a straight back worksurface in the FIKA office furniture configuration system.
+This document describes the logic and behavior of a straight back worksurface product. This product is a type of support worksurface with specific characteristics and rules for configuration.
 
-## Overview
+## Part Numbers
 
-The straight back worksurface is a rectangular support surface with a straight back edge, designed to connect with other furniture pieces. It is part of the FIKA product line.
+The part numbers for the straight back worksurface follow a specific format: `FIKA-WS-RECT-WWDD`, where:
 
-## Part Number Structure
+- `FIKA`: The product line identifier
+- `WS`: Indicates it's a worksurface
+- `RECT`: Specifies that it's a rectangular shape
+- `WW`: Width in inches (18 to 96, in 6-inch increments)
+- `DD`: Depth in inches (18 to 96, in 6-inch increments)
 
-The part number for a straight back worksurface follows this format:
-
-```
-FIKA-WS-RECT-WWDD
-```
-
-Where:
-- FIKA: Product line identifier
-- WS: Worksurface indicator
-- RECT: Rectangular shape indicator
-- WW: Width in inches (18 to 96)
-- DD: Depth in inches (18 to 96)
-
-### Part Number Breakdown
+Here's a table explaining the part number structure:
 
 | Component | Description | Possible Values |
 |-----------|-------------|-----------------|
-| FIKA      | Product line | FIKA |
-| WS        | Worksurface | WS |
-| RECT      | Shape       | RECT |
-| WW        | Width       | 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84, 90, 96 |
-| DD        | Depth       | 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84, 90, 96 |
+| FIKA      | Product line | Fixed as "FIKA" |
+| WS        | Worksurface indicator | Fixed as "WS" |
+| RECT      | Shape indicator | Fixed as "RECT" for rectangular |
+| WW        | Width in inches | 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84, 90, 96 |
+| DD        | Depth in inches | 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84, 90, 96 |
 
-## Valid Part Numbers
+Valid part numbers for this product include:
 
-Based on the provided list, here are examples of valid part numbers for straight back worksurfaces:
+- FIKA-WS-RECT-1818
+- FIKA-WS-RECT-2424
+- FIKA-WS-RECT-3030
+- FIKA-WS-RECT-3636
+- FIKA-WS-RECT-4242
+- FIKA-WS-RECT-4848
+- FIKA-WS-RECT-5454
+- FIKA-WS-RECT-6060
+- FIKA-WS-RECT-6666
+- FIKA-WS-RECT-7272
+- FIKA-WS-RECT-7878
+- FIKA-WS-RECT-8484
+- FIKA-WS-RECT-9090
+- FIKA-WS-RECT-9696
 
-```
-FIKA-WS-RECT-1818, FIKA-WS-RECT-2436, FIKA-WS-RECT-3060, FIKA-WS-RECT-4872, FIKA-WS-RECT-6096
-```
+Note that not all combinations of width and depth are available. The actual available sizes may be limited based on manufacturing or design constraints.
 
-## Dimensions
+## Dimensions and Properties
 
-1. Width: 18" to 96", in 6" increments
-2. Depth: 18" to 96", in 6" increments
+The straight back worksurface has two main dimensions:
 
-The part number directly encodes these dimensions. For example, FIKA-WS-RECT-3060 represents a worksurface that is 30" wide and 60" deep.
+1. Width: Represented by the property `cFOWidthPK`
+2. Depth: Represented by the property `cFODepthPK`
 
-## Edges and Connections
+### Valid Dimensions
 
-The worksurface has four edges:
+- Width: The width can range from 18 inches to 96 inches, with increments of 6 inches.
+- Depth: The depth can range from 18 inches to 96 inches, with increments of 6 inches.
 
-1. Back edge (b): Straight edge at the rear
-2. Front edge (f): Opposite to the back edge, typically thicker
-3. Left side edge (ls): Left edge when facing from the front
-4. Right side edge (rs): Right edge when facing from the front
+## Shape and Edges
 
-Each edge can connect to other furniture pieces, with the front edge having special alignment properties when connecting to other worksurfaces or storage units.
+The worksurface has a rectangular shape with four distinct edges:
 
-## Behavior and Interactions
+1. Back edge: Labeled as "b"
+2. Front edge: Labeled as "f"
+3. Left side: Labeled as "ls"
+4. Right side: Labeled as "rs"
 
-1. **Stretching**: Can be stretched from sides or front. When stretched from the sides, the back edge remains fixed. When stretched from the front, both side edges remain fixed.
-2. **Snapping**: Snaps into place near other furniture pieces, with sophisticated behavior when connecting to other worksurfaces.
-3. **Adjacent Worksurfaces**: System identifies adjacent straight back worksurfaces to the left or right, allowing for continuous work surfaces.
-4. **Height Adjustment**: Adjustable height (details not specified in this class)
-5. **Support Components**: Can have support components added (e.g., legs)
+The front edge is distinguished from the other edges by having a thicker line type in visual representations.
 
-## User Interaction
+## Connectivity and Interaction Rules
 
-Users can modify the worksurface through:
+1. The worksurface can connect to other worksurfaces and base storage units.
+2. When connecting to another worksurface or base storage unit along its front edge, special alignment rules apply to ensure proper positioning.
+3. The worksurface can be adjusted to snap to the left or right side of another worksurface during placement, depending on the mouse position relative to the target worksurface's center.
 
-1. Stretching: Drag edges to resize
-2. Direct Input: Enter width and depth directly
-3. Buttons: Adjust width and depth
+## Stretching and Modification
 
-The system ensures all changes are within allowed ranges and snapped to valid values.
+- The width can be modified by stretching the left or right sides.
+- The depth can be modified by stretching the front edge.
+- When stretching the width, the back edge remains fixed.
+- When stretching the depth, both left and right sides remain fixed.
 
-## Remarks
+## Grouping and Adjacent Surfaces
 
-1. The part number system allows for easy identification of worksurface dimensions.
-2. The available sizes cover a wide range of office layout needs.
-3. The modular nature of the part numbers facilitates inventory management and ordering.
-4. Users should refer to the part number to quickly understand the worksurface size without needing to measure.
-5. The specific materials and edge types (besides the thicker front edge) are not defined in this documentation and may be handled by related systems.
+The worksurface can identify and group with other straight back worksurfaces that are adjacent to it. This grouping considers:
 
-This documentation provides a comprehensive overview of the straight back worksurface's functionality, part number structure, and configuration logic. It should assist interior designers in understanding, specifying, and configuring the correct worksurface for their projects.
+1. Surfaces to the left
+2. Surfaces to the right
+3. Surfaces in both directions
+
+Adjacent surfaces are only grouped if they have the same rotation (yaw) as the current surface.
+
+## Input Settings
+
+The width and depth properties have specific input settings:
+
+- Both are stretchable, insertable, and draggable.
+- Both can be locked.
+- Both have buttons for quick adjustments.
+- Changes to these dimensions affect all connected components.
+
+## Additional Notes
+
+- The worksurface uses a standard edge type (FOStdEdge) for most edges, with a special edge type (FOBigEdge) for the front edge.
+- The product supports automatic generation of supports, though the specific logic for this is not detailed in this class.
+- The product can be part of a larger configuration system, interacting with other office furniture components.
+
+## Remarks and Disclaimers
+
+- The behavior of height adjustments, while supported, is not fully detailed in this documentation.
+- Actual available sizes may be subject to manufacturing or design constraints not specified in this document.

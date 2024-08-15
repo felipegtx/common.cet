@@ -2,95 +2,123 @@
 
 ## Product Overview
 
-This document describes the configuration logic and part number structure for the FIKA Office Lateral Cabinet. This storage solution is part of the FIKA office furniture line and is designed to provide versatile storage options in various office environments.
+This document describes the configuration logic for the FIKA Office Lateral Cabinet. This storage solution is part of the FIKA office furniture line and is designed to provide versatile storage options in various office environments.
 
 ## Part Number Structure
 
-The part number for the FIKA Office Lateral Cabinet follows a specific structure that encodes information about the product's configuration:
+The part number for the FIKA Lateral Cabinet follows a specific structure that encodes information about the product's configuration. The general format is:
 
 ```
 FIKA-LAT[X]-[WIDTH][DEPTH]
 ```
 
-| Component | Description | Possible Values |
-|-----------|-------------|-----------------|
-| FIKA      | Brand identifier | Always "FIKA" |
-| LAT       | Product type (Lateral Cabinet) | Always "LAT" |
-| [X]       | Height option | 1, 15, 2, 3, 4, 5, 6 |
-| [WIDTH]   | Width in inches | 30, 36, 42 |
-| [DEPTH]   | Depth in inches | 18, 24 |
+Where:
+- `FIKA` is the brand identifier
+- `LAT` indicates it's a Lateral Cabinet
+- `[X]` is a number representing the height configuration
+- `[WIDTH]` is the width in inches
+- `[DEPTH]` is the depth in inches
 
-### Height Options
+## Dimensions and Configurations
 
-The [X] in the part number represents the height option:
-
-| [X] Value | Height Description |
-|-----------|---------------------|
-| 1         | One High            |
-| 15        | One and a Half High |
-| 2         | Two High            |
-| 3         | Three High          |
-| 4         | Four High           |
-| 5         | Five High           |
-| 6         | Six High            |
-
-## Dimensions
-
-The FIKA Office Lateral Cabinet is available in multiple sizes to accommodate different space requirements and storage needs:
-
-### Width
+### Width Options
+The lateral cabinet is available in three width options:
 - 30 inches
 - 36 inches
 - 42 inches
 
-### Depth
+### Depth Options
+Two depth options are available for this cabinet:
 - 18 inches
 - 24 inches
 
-### Height
-The cabinet is available in several height options:
-- One High
-- One and a Half High
-- Two High
-- Three High
-- Four High
-- Five High
-- Six High
+### Height Options
+The lateral cabinet comes in various height configurations:
+
+| Height Configuration | Code |
+|----------------------|------|
+| One High             | 1    |
+| One and a Half High  | 15   |
+| Two High             | 2    |
+| Three High           | 3    |
+| Four High            | 4    |
+| Five High            | 5    |
+| Six High             | 6    |
+
+Note: The specific measurements for these height options are not provided in the given information. They are likely standardized heights within the FIKA office furniture line.
 
 ## Valid Part Numbers
 
-All combinations of height, width, and depth listed in the part number structure are valid configurations. For example:
+Based on the available configurations, here are the valid part numbers for the FIKA Lateral Cabinet:
 
-- FIKA-LAT1-3018 (One High, 30" width, 18" depth)
-- FIKA-LAT2-3624 (Two High, 36" width, 24" depth)
-- FIKA-LAT6-4218 (Six High, 42" width, 18" depth)
+| Part Number    | Width | Depth | Height Configuration |
+|----------------|-------|-------|----------------------|
+| FIKA-LAT1-3018 | 30"   | 18"   | One High             |
+| FIKA-LAT1-3024 | 30"   | 24"   | One High             |
+| FIKA-LAT1-3618 | 36"   | 18"   | One High             |
+| FIKA-LAT1-3624 | 36"   | 24"   | One High             |
+| FIKA-LAT1-4218 | 42"   | 18"   | One High             |
+| FIKA-LAT1-4224 | 42"   | 24"   | One High             |
+| FIKA-LAT15-3018| 30"   | 18"   | One and a Half High  |
+| FIKA-LAT15-3024| 30"   | 24"   | One and a Half High  |
+| FIKA-LAT15-3618| 36"   | 18"   | One and a Half High  |
+| FIKA-LAT15-3624| 36"   | 24"   | One and a Half High  |
+| FIKA-LAT15-4218| 42"   | 18"   | One and a Half High  |
+| FIKA-LAT15-4224| 42"   | 24"   | One and a Half High  |
+| FIKA-LAT2-3018 | 30"   | 18"   | Two High             |
+| FIKA-LAT2-3024 | 30"   | 24"   | Two High             |
+| FIKA-LAT2-3618 | 36"   | 18"   | Two High             |
+| FIKA-LAT2-3624 | 36"   | 24"   | Two High             |
+| FIKA-LAT2-4218 | 42"   | 18"   | Two High             |
+| FIKA-LAT2-4224 | 42"   | 24"   | Two High             |
+| FIKA-LAT3-3018 | 30"   | 18"   | Three High           |
+| FIKA-LAT3-3024 | 30"   | 24"   | Three High           |
+| FIKA-LAT3-3618 | 36"   | 18"   | Three High           |
+| FIKA-LAT3-3624 | 36"   | 24"   | Three High           |
+| FIKA-LAT3-4218 | 42"   | 18"   | Three High           |
+| FIKA-LAT3-4224 | 42"   | 24"   | Three High           |
+| FIKA-LAT4-3018 | 30"   | 18"   | Four High            |
+| FIKA-LAT4-3024 | 30"   | 24"   | Four High            |
+| FIKA-LAT4-3618 | 36"   | 18"   | Four High            |
+| FIKA-LAT4-3624 | 36"   | 24"   | Four High            |
+| FIKA-LAT4-4218 | 42"   | 18"   | Four High            |
+| FIKA-LAT4-4224 | 42"   | 24"   | Four High            |
+| FIKA-LAT5-3018 | 30"   | 18"   | Five High            |
+| FIKA-LAT5-3024 | 30"   | 24"   | Five High            |
+| FIKA-LAT5-3618 | 36"   | 18"   | Five High            |
+| FIKA-LAT5-3624 | 36"   | 24"   | Five High            |
+| FIKA-LAT5-4218 | 42"   | 18"   | Five High            |
+| FIKA-LAT5-4224 | 42"   | 24"   | Five High            |
+| FIKA-LAT6-3018 | 30"   | 18"   | Six High             |
+| FIKA-LAT6-3024 | 30"   | 24"   | Six High             |
+| FIKA-LAT6-3618 | 36"   | 18"   | Six High             |
+| FIKA-LAT6-3624 | 36"   | 24"   | Six High             |
+| FIKA-LAT6-4218 | 42"   | 18"   | Six High             |
+| FIKA-LAT6-4224 | 42"   | 24"   | Six High             |
 
-## Product Categories
+## Initial Height Setting
 
-The FIKA Office Lateral Cabinet belongs to the following categories:
-- Lower Storage Category
-- Lower Storage Symbol
+When configuring a lateral cabinet, the system will automatically set the initial height to the "Two High" option. This serves as the default starting point for height configuration.
 
-These categories help in organizing and identifying the product within the FIKA office furniture system.
+## Product Categorization
+
+The FIKA Lateral Cabinet is categorized as:
+1. A lower storage unit
+2. Part of the general office storage system
+
+These categorizations help in organizing and filtering the product within the larger office furniture catalog.
 
 ## Configuration Rules and Constraints
 
-1. All combinations of height, width, and depth listed in the part number structure are valid configurations.
-2. The initial height when configuring a new FIKA Office Lateral Cabinet is set to "Two High" by default.
-3. The cabinet is available in three widths: 30", 36", and 42".
-4. Two depth options are available for all configurations: 18" and 24".
-5. Height options range from "One High" to "Six High", including a "One and a Half High" option.
+While specific rules and constraints are not explicitly stated in the provided information, it's important to note that:
+
+1. Only the listed width, depth, and height options are available. Customizations outside these options are not possible.
+2. The cabinet's configuration should be compatible with other FIKA office furniture pieces, though specific interaction rules are not detailed in the given information.
 
 ## Remarks and Disclaimers
 
-1. The exact measurements for each height option (e.g., "One High", "Two High") are not specified in the given information. It's assumed that these are standard heights within the FIKA office furniture system.
+1. The provided information does not include details about materials, colors, or additional features such as locks or handle types. These options may exist but are not specified in the given class structure.
+2. No specific invalidation rules or constraints regarding the cabinet's placement or interaction with other furniture pieces are provided in the given information.
+3. The exact measurements for the height options (e.g., "One High", "Two High") are not specified. These are likely standardized within the FIKA office furniture line and would be known to the design team.
 
-2. While the cabinet is categorized under "Lower Storage", it's worth noting that it can be configured up to "Six High". The term "Lower" might refer to its base configuration or its primary intended use.
-
-3. The configuration system uses imperial measurements (inches) for width and depth. It's important to ensure that any space planning or layout design takes this into account, especially in regions that primarily use metric measurements.
-
-4. When integrating this cabinet with other furniture pieces in the FIKA office line, consult additional documentation or guidelines for potential interactions or constraints.
-
-5. The part number structure provided in this document supersedes any previously mentioned formats (such as "FIKA-CAB-LAT") and should be used for all configurations of the FIKA Office Lateral Cabinet.
-
-This documentation provides a clear and detailed explanation of the FIKA Office Lateral Cabinet part number structure and available configurations, making it easier for Interior Designers to understand and specify the product without requiring programming knowledge.
+This documentation aims to provide a clear understanding of the FIKA Lateral Cabinet's configuration options and basic product information based on the available data. For more detailed information or specific queries, please consult with the FIKA product team or refer to additional product documentation.

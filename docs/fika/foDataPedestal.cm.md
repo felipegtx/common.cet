@@ -1,95 +1,99 @@
+Here's the consolidated document that combines the information from both sources while removing redundancies and preserving all key points:
+
 # FIKA Office Pedestal Cabinet Documentation
 
 ## Product Overview
 
-The FIKA Office Pedestal Cabinet is a versatile storage solution designed for office environments. It's a lower storage unit that can be placed under or near desks and workstations, offering various configurations to suit different storage needs.
-
-## Part Number Structure
-
-The part number for the FIKA Office Pedestal Cabinet follows a specific structure that encodes important information about the product:
-
-```
-FIKA-CAB-[Type]-[Width][Depth]
-```
-
-| Component | Description | Possible Values |
-|-----------|-------------|-----------------|
-| FIKA      | Brand identifier | Always "FIKA" |
-| CAB       | Product category (Cabinet) | Always "CAB" |
-| Type      | Cabinet configuration | BBF (Box/Box/File), FF (File/File), SBOOO (Side-to-Side Box/Open/Open/Open) |
-| Width     | Cabinet width in inches | 15, 18 |
-| Depth     | Cabinet depth in inches | 18, 24, 30 |
-
-### Valid Part Numbers
-
-| Part Number | Configuration | Width | Depth |
-|-------------|---------------|-------|-------|
-| FIKA-CAB-BBF-1518 | Box/Box/File | 15" | 18" |
-| FIKA-CAB-BBF-1524 | Box/Box/File | 15" | 24" |
-| FIKA-CAB-BBF-1530 | Box/Box/File | 15" | 30" |
-| FIKA-CAB-BBF-1818 | Box/Box/File | 18" | 18" |
-| FIKA-CAB-BBF-1824 | Box/Box/File | 18" | 24" |
-| FIKA-CAB-BBF-1830 | Box/Box/File | 18" | 30" |
-| FIKA-CAB-FF-1518 | File/File | 15" | 18" |
-| FIKA-CAB-FF-1524 | File/File | 15" | 24" |
-| FIKA-CAB-FF-1530 | File/File | 15" | 30" |
-| FIKA-CAB-FF-1818 | File/File | 18" | 18" |
-| FIKA-CAB-FF-1824 | File/File | 18" | 24" |
-| FIKA-CAB-FF-1830 | File/File | 18" | 30" |
-| FIKA-CAB-SBOOO-1518 | Side-to-Side Box/Open/Open/Open | 15" | 18" |
-| FIKA-CAB-SBOOO-1524 | Side-to-Side Box/Open/Open/Open | 15" | 24" |
-| FIKA-CAB-SBOOO-1530 | Side-to-Side Box/Open/Open/Open | 15" | 30" |
-| FIKA-CAB-SBOOO-1818 | Side-to-Side Box/Open/Open/Open | 18" | 18" |
-| FIKA-CAB-SBOOO-1824 | Side-to-Side Box/Open/Open/Open | 18" | 24" |
-| FIKA-CAB-SBOOO-1830 | Side-to-Side Box/Open/Open/Open | 18" | 30" |
+This document describes the configuration logic and part number structure for the FIKA Office Pedestal Cabinet. This storage unit is designed to fit under desks or workstations, providing convenient storage space in office environments.
 
 ## Dimensions
 
 The FIKA Office Pedestal Cabinet is available in the following dimensions:
 
-- **Width**: 15 inches or 18 inches
-- **Depth**: 18 inches, 24 inches, or 30 inches
-- **Height**: Fixed at two cabinet heights (standard "two-high" cabinet size)
+1. Width:
+   - 15 inches
+   - 18 inches
 
-## Configuration Types
+2. Depth:
+   - 18 inches
+   - 24 inches
+   - 30 inches
 
-1. **BBF (Box/Box/File)**: Two box drawers on top and one file drawer at the bottom.
-2. **FF (File/File)**: Two file drawers.
-3. **SBOOO (Side-to-Side Box/Open/Open/Open)**: One side-to-side box drawer on top and three open compartments below.
+3. Height:
+   - Fixed at a standard height (exact measurement not specified)
+
+## Part Number Structure
+
+The part number for the FIKA Office Pedestal Cabinet follows this structure:
+
+```
+FIKA-CAB-[Type]-[Width][Depth]
+```
+
+Where:
+- FIKA: Brand identifier
+- CAB: Product category (Cabinet)
+- [Type]: Cabinet type (BBF for Box/Box/File, FF for File/File, or SBOOO for Side-to-Side)
+- [Width]: Width in inches (15 or 18)
+- [Depth]: Depth in inches (18, 24, or 30)
+
+### Part Number Table
+
+| Type | Width | Depth | Part Number |
+|------|-------|-------|-------------|
+| BBF  | 15    | 18    | FIKA-CAB-BBF-1518 |
+| BBF  | 15    | 24    | FIKA-CAB-BBF-1524 |
+| BBF  | 15    | 30    | FIKA-CAB-BBF-1530 |
+| BBF  | 18    | 18    | FIKA-CAB-BBF-1818 |
+| BBF  | 18    | 24    | FIKA-CAB-BBF-1824 |
+| BBF  | 18    | 30    | FIKA-CAB-BBF-1830 |
+| FF   | 15    | 18    | FIKA-CAB-FF-1518 |
+| FF   | 15    | 24    | FIKA-CAB-FF-1524 |
+| FF   | 15    | 30    | FIKA-CAB-FF-1530 |
+| FF   | 18    | 18    | FIKA-CAB-FF-1818 |
+| FF   | 18    | 24    | FIKA-CAB-FF-1824 |
+| FF   | 18    | 30    | FIKA-CAB-FF-1830 |
+| SBOOO| 15    | 18    | FIKA-CAB-SBOOO-1518 |
+| SBOOO| 15    | 24    | FIKA-CAB-SBOOO-1524 |
+| SBOOO| 15    | 30    | FIKA-CAB-SBOOO-1530 |
+| SBOOO| 18    | 18    | FIKA-CAB-SBOOO-1818 |
+| SBOOO| 18    | 24    | FIKA-CAB-SBOOO-1824 |
+| SBOOO| 18    | 30    | FIKA-CAB-SBOOO-1830 |
 
 ## Product Categories
 
-This pedestal cabinet is categorized as:
-1. Lower storage
-2. A symbol representing lower storage in the design software
+This pedestal cabinet belongs to the following categories:
+- Lower Storage
+- Lower Storage Symbol
 
-These categories help in organizing and identifying the product within the FIKA office furniture system.
+These categories help classify the product within the office furniture system.
 
 ## Configuration Rules and Behavior
 
 1. **Dimension Synchronization**: 
-   The cabinet's width and depth are synchronized with its internal data, ensuring that the physical dimensions always match the specifications in the system.
+   The cabinet automatically updates its internal data to match the current width and depth settings. This ensures that all parts of the system are aware of the cabinet's current size.
 
 2. **Height Initialization**: 
-   The height of the cabinet is always initialized to a standard "two-high" cabinet size. This height is fixed and cannot be changed.
+   When first placed, the cabinet always starts at the standard height for its type (BBF, FF, or SBOOO).
 
-3. **Data Handling**: 
-   When certain types of data are modified:
-   - The system saves the current state of the cabinet.
-   - It applies the new data.
-   - It restores any sub-features that might have been affected.
-   - It marks the cabinet for a visual update in the design software.
+3. **Data Restoration**: 
+   If the cabinet's configuration is changed, the system attempts to restore any sub-features that were previously set. This helps maintain consistency in the cabinet's setup even when modifications are made.
 
-4. **Placement**: 
-   The cabinet can be snapped into place within a design, making it easy to position accurately in relation to other furniture items.
+4. **Invalidation and Rebuilding**: 
+   After certain changes, the cabinet's visual representation is marked for rebuilding. This ensures that what you see in the design accurately reflects the current configuration.
+
+5. **Placement Behavior**: 
+   The cabinet can be easily snapped into place within the office layout, making it simple to position correctly in relation to other furniture items.
 
 ## Interaction with Other Products
 
-The pedestal cabinet is designed to complement other FIKA office furniture. It can be placed under or alongside desks and workstations to provide convenient storage solutions.
+While specific interaction rules are not detailed in the provided information, the following can be inferred:
+
+1. As a lower storage unit, this pedestal cabinet is likely designed to fit under or beside desks and workstations.
+2. Its categorization as a lower storage item suggests it may have specific placement rules in relation to other office furniture pieces.
 
 ## Remarks and Disclaimers
 
-1. The exact measurement for the "two-high" cabinet height is not specified but is consistent across all models.
-2. When specifying a FIKA Office Pedestal Cabinet, always use the full part number to ensure the correct configuration and dimensions are ordered.
-3. For detailed information about features such as drawer specifications, lock options, and available finishes, please consult the full product catalog or contact a FIKA representative.
-4. The system updates the visual representation of the cabinet whenever certain data changes are made, ensuring that the design always reflects the current configuration.
+1. The exact measurement for the standard height of each cabinet type is not specified in the provided information.
+2. Detailed rules about how this pedestal cabinet interacts with other specific furniture items are not provided in the given class information.
+3. No specific invalidation rules were found in the provided code snippet.

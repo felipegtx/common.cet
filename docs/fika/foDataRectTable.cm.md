@@ -1,50 +1,10 @@
-Based on the two documents provided, I've consolidated the information into a single, clear, and concise document that focuses on the FIKA Rectangular Table's part number structure and configuration logic. Here's the consolidated documentation in markdown format:
-
 # FIKA Rectangular Table Documentation
 
 This document describes the configuration logic and part number structure for the FIKA Rectangular Table, a freestanding table product.
 
-## Part Number Structure
-
-The part number for the FIKA Rectangular Table follows this structure:
-
-```
-FIKA-TBL-FSRECT-WWDD
-```
-
-Where:
-- `FIKA`: Brand identifier
-- `TBL`: Product type (Table)
-- `FSRECT`: Table style (Freestanding Rectangular)
-- `WW`: Width in inches
-- `DD`: Depth in inches
-
-### Valid Part Numbers
-
-Here's a table of all valid part numbers for the FIKA Rectangular Table:
-
-| Part Number | Width (inches) | Depth (inches) |
-|-------------|----------------|----------------|
-| FIKA-TBL-FSRECT-3636 | 36 | 36 |
-| FIKA-TBL-FSRECT-3642 | 36 | 42 |
-| FIKA-TBL-FSRECT-4236 | 42 | 36 |
-| FIKA-TBL-FSRECT-4242 | 42 | 42 |
-| FIKA-TBL-FSRECT-4836 | 48 | 36 |
-| FIKA-TBL-FSRECT-4842 | 48 | 42 |
-| FIKA-TBL-FSRECT-5436 | 54 | 36 |
-| FIKA-TBL-FSRECT-5442 | 54 | 42 |
-| FIKA-TBL-FSRECT-6036 | 60 | 36 |
-| FIKA-TBL-FSRECT-6042 | 60 | 42 |
-| FIKA-TBL-FSRECT-6636 | 66 | 36 |
-| FIKA-TBL-FSRECT-6642 | 66 | 42 |
-| FIKA-TBL-FSRECT-7236 | 72 | 36 |
-| FIKA-TBL-FSRECT-7242 | 72 | 42 |
-| FIKA-TBL-FSRECT-7836 | 78 | 36 |
-| FIKA-TBL-FSRECT-7842 | 78 | 42 |
-| FIKA-TBL-FSRECT-8436 | 84 | 36 |
-| FIKA-TBL-FSRECT-8442 | 84 | 42 |
-
 ## Dimensions and Size Constraints
+
+The FIKA Rectangular Table has two main dimensions:
 
 1. **Width**: 
    - Range: 36 inches to 84 inches
@@ -54,60 +14,101 @@ Here's a table of all valid part numbers for the FIKA Rectangular Table:
 2. **Depth**: 
    - Available sizes: 36 inches or 42 inches
 
+## Part Number Structure
+
+The part number for the FIKA Rectangular Table follows this structure:
+
+```
+FIKA-TBL-FSRECT-[WIDTH][DEPTH]
+```
+
+Where:
+- FIKA: Brand identifier
+- TBL: Indicates it's a table
+- FSRECT: Stands for Freestanding Rectangular
+- [WIDTH]: Two-digit width in inches
+- [DEPTH]: Two-digit depth in inches
+
+Example: FIKA-TBL-FSRECT-3636 represents a 36" wide by 36" deep table.
+
+| Component | Description | Possible Values |
+|-----------|-------------|-----------------|
+| FIKA      | Brand identifier | Always "FIKA" |
+| TBL       | Product type | Always "TBL" for tables |
+| FSRECT    | Table shape | Always "FSRECT" for freestanding rectangular |
+| [WIDTH]   | Table width in inches | 36, 42, 48, 54, 60, 66, 72, 78, 84 |
+| [DEPTH]   | Table depth in inches | 36, 42 |
+
+## Valid Part Numbers
+
+Based on the available dimensions, here's a list of all valid part numbers for the FIKA Rectangular Table:
+
+- FIKA-TBL-FSRECT-3636
+- FIKA-TBL-FSRECT-3642
+- FIKA-TBL-FSRECT-4236
+- FIKA-TBL-FSRECT-4242
+- FIKA-TBL-FSRECT-4836
+- FIKA-TBL-FSRECT-4842
+- FIKA-TBL-FSRECT-5436
+- FIKA-TBL-FSRECT-5442
+- FIKA-TBL-FSRECT-6036
+- FIKA-TBL-FSRECT-6042
+- FIKA-TBL-FSRECT-6636
+- FIKA-TBL-FSRECT-6642
+- FIKA-TBL-FSRECT-7236
+- FIKA-TBL-FSRECT-7242
+- FIKA-TBL-FSRECT-7836
+- FIKA-TBL-FSRECT-7842
+- FIKA-TBL-FSRECT-8436
+- FIKA-TBL-FSRECT-8442
+
 ## Table Shape and Features
 
-- Rectangular shape with rounded corners (2-inch radius)
-- Four sides: front, back, left, and right
+- The table has a rectangular shape with rounded corners.
+- The corner radius is 2 inches.
+- The table surface has four edges: front, back, left side, and right side.
 
 ## Base Types and Support
 
-The table can have two types of bases, determined by the table width:
+The table can have two types of bases:
 
-1. **Post Legs**: 
-   - For tables with width up to 54 inches
-   - Four legs positioned near the corners
+1. **X-Base**:
+   - Used when the table width is 54 inches or less.
+   - Single center support for smaller tables.
+   - Dual support (left and right center) for tables wider than 54 inches.
 
-2. **X-Base**: 
-   - For tables with width greater than 54 inches
-   - One central X-base (for tables up to 54 inches wide)
-   - Two X-bases (for tables wider than 54 inches)
+2. **Post Legs**:
+   - Used when the table width is greater than 54 inches.
+   - Four legs positioned near the corners of the table.
 
-### Post Leg Positions
+The system automatically determines the appropriate base type and support configuration based on the table's width.
 
-When using post legs, they are positioned slightly inset from the corners:
-- Lower Left
-- Lower Right
-- Upper Right
-- Upper Left
+## Customization and Interaction Rules
 
-### X-Base Positions
+1. **Width Adjustment**: 
+   - The width can be changed by adjusting the left or right side of the table.
+   - When stretching the width, the back edge of the table moves.
 
-For X-base support:
-- Tables up to 54 inches wide: One central X-base
-- Tables wider than 54 inches: Two X-bases, positioned at 1/4 and 3/4 of the table width
+2. **Depth Adjustment**: 
+   - The depth can be changed by adjusting the front edge of the table.
+   - When stretching the depth, both left and right sides of the table move.
 
-## Configuration Rules and Constraints
+3. **Material Selection**:
+   - Users can select materials for the table top and edge.
+   - Base material and metal paint options are available for customization.
 
-1. Width must be selected before depth
-2. Changing base type recalculates support locations
-3. Multiple chair placements are allowed
-4. Edge stretching affects adjacent edges:
-   - Stretching left/right affects back edge
-   - Stretching front affects left and right sides
+4. **Chair Placement**:
+   - The table allows for multiple chair placements around it.
 
-## Material and Finish Options
+## Additional Notes
 
-The table has three main components for material selection:
-1. Surface material (tabletop)
-2. Edge material
-3. Base material (including painted metal options)
+- The table is designed to work with a snapping system for precise placement and alignment.
+- The table is categorized under office furniture, specifically in the tables and table support categories.
+- The surface material is referenced as "A-FURN-TBFS-TPXX" in the system.
 
-Specific material and finish options should be documented separately as part of the product's configuration logic.
+## Remarks and Disclaimers
 
-## Remarks
+- The exact material options and color choices are not specified in the provided information.
+- Specific rules for interaction with other furniture pieces are not detailed in the provided information.
 
-- The table height is not specified in the part number and should be documented separately
-- Material and finish selections are not reflected in the part number
-- The base type (Post Legs or X-Base) is determined by the table width and is not explicitly coded in the part number
-
-This consolidated documentation provides a clear and concise explanation of the FIKA Rectangular Table's part number structure, valid configurations, and key features. It should be easily understood by Interior Designers, focusing on the product configuration logic and part number structure.
+This documentation provides an overview of the FIKA Rectangular Table's configuration logic and part number structure. For more detailed information or specific queries, please consult with the development team.

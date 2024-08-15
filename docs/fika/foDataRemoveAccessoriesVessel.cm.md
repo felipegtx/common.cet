@@ -1,150 +1,66 @@
-# FIKA Product Line Documentation
+Based on the provided information, here's the consolidated documentation:
+
+# FODataRemoveAccessoriesVessel Documentation
 
 ## Overview
 
-The FIKA product line offers a comprehensive range of office furniture components, including cabinets, bookcases, lateral files, overhead storage, worksurfaces, tables, and various accessories. This document provides detailed information on the part numbering system and configuration logic for the FIKA product line.
+This document describes the functionality of the FODataRemoveAccessoriesVessel, which is responsible for removing accessories from worksurfaces in an office environment. This vessel extends the capabilities of the RemoveAccessoryVessel to handle multiple worksurfaces based on different spread options.
 
-## Part Numbers
+## Spread Options
 
-FIKA part numbers follow a standardized structure to uniquely identify each component:
+The vessel operates based on different spread options, which determine how accessories are removed from worksurfaces:
 
-```
-FIKA-[ProductType]-[Specifications]
-```
+1. **No Spread**: Removes accessories only from the selected worksurface.
+2. **Sideways**: Removes accessories from the selected worksurface and its connected neighbors.
+3. **Group**: Removes accessories from all worksurfaces in the same connected group.
+4. **All**: Removes accessories from all worksurfaces in the main space.
 
-Where:
-- `FIKA` is the product line identifier
-- `[ProductType]` indicates the type of component
-- `[Specifications]` provide details about size, configuration, or other attributes
+## Functionality
 
-### Product Types and Their Part Numbers
+### Removing Accessories
 
-#### 1. Cabinets (CAB)
+When the user initiates the removal action:
 
-| Part Number Format | Description | Example |
-|--------------------|-------------|---------|
-| FIKA-CAB-BBF-WWDD | Box/Box/File cabinet | FIKA-CAB-BBF-1518 |
-| FIKA-CAB-FF-WWDD | File/File cabinet | FIKA-CAB-FF-1824 |
-| FIKA-CAB-SBOOO-WWDD | Open cabinet with shelf | FIKA-CAB-SBOOO-1530 |
+1. The system checks the current spread option.
+2. If there's no spread, it removes accessories only from the selected worksurface.
+3. For other spread options, it identifies the relevant worksurfaces based on the spread type.
+4. For each identified worksurface, the system removes all accessories attached to it.
+5. After removal, the system updates the visual representation of the worksurfaces.
 
-Where:
-- WW: Width in inches (15, 18)
-- DD: Depth in inches (18, 24, 30)
+### Identifying Relevant Worksurfaces
 
-#### 2. Bookcases (BOOK)
+The system determines which worksurfaces to include based on the spread option:
 
-| Part Number Format | Description | Example |
-|--------------------|-------------|---------|
-| FIKA-BOOKH-WWDD | Bookcase | FIKA-BOOK3-3024 |
+- For **Sideways** spread: It includes the selected worksurface and all its directly and indirectly connected neighbors.
+- For **Group** spread: It includes all worksurfaces that are connected in the same group as the selected worksurface.
+- For **All** spread: It includes every worksurface in the main space.
 
-Where:
-- H: Height level (2, 3, 4, 5)
-- WW: Width in inches (24, 30, 36, 42)
-- DD: Depth in inches (24, 30)
+### Visual Representation
 
-#### 3. Lateral Files (LAT)
+The vessel provides both 2D and 3D visual representations to help users understand which worksurfaces are affected:
 
-| Part Number Format | Description | Example |
-|--------------------|-------------|---------|
-| FIKA-LATH-WWDD | Lateral file | FIKA-LAT3-3618 |
+#### 2D Representation:
+- Displays the shape of each affected worksurface.
+- Uses a reddish color (RGB: 192, 64, 64) to highlight the affected areas.
+- If no worksurfaces are affected, it shows a small circle at the cursor position.
 
-Where:
-- H: Height level (1, 15, 2, 3, 4, 5, 6)
-- WW: Width in inches (30, 36, 42)
-- DD: Depth in inches (18, 24)
+#### 3D Representation:
+- Places a red arrow on top of each affected worksurface.
+- Highlights the frame of each affected worksurface in bright red.
+- If no worksurfaces are affected, it displays a gray arrow at the cursor position.
 
-#### 4. Overhead Storage (OVERHEAD)
+## Interaction with Other Products
 
-| Part Number Format | Description | Example |
-|--------------------|-------------|---------|
-| FIKA-OVERHEAD-WW14 | Closed overhead storage | FIKA-OVERHEAD-3614 |
-| FIKA-OVERHEAD-WW14-OPEN | Open overhead storage | FIKA-OVERHEAD-4214-OPEN |
+This vessel interacts primarily with worksurfaces and their accessories. It does not directly affect other types of office furniture or equipment.
 
-Where:
-- WW: Width in inches (30, 36, 42, 48, 54, 60)
+## Constraints and Rules
 
-#### 5. Worksurfaces (WS)
+- The removal action only applies to accessories that are attached to worksurfaces.
+- The spread option determines the scope of the removal action, ranging from a single worksurface to all worksurfaces in the space.
+- Connected worksurfaces are treated as a group when using the "Group" spread option.
 
-| Part Number Format | Description | Example |
-|--------------------|-------------|---------|
-| FIKA-WS-RECT-WWDD | Rectangular worksurface | FIKA-WS-RECT-3060 |
-| FIKA-WS-ARC-WWDD | Arc-shaped worksurface | FIKA-WS-ARC-3672 |
-| FIKA-WS-120-WWDDHHDD | 120-degree worksurface | FIKA-WS-120-30484830 |
+## Remarks and Disclaimers
 
-Where:
-- WW: Width in inches
-- DD: Depth in inches
-- HH: Height in inches (for 120-degree surfaces)
-
-#### 6. Tables (TBL)
-
-| Part Number Format | Description | Example |
-|--------------------|-------------|---------|
-| FIKA-TBL-FSRECT-WWDD | Rectangular table | FIKA-TBL-FSRECT-4242 |
-| FIKA-TBL-FSROUND-DD | Round table | FIKA-TBL-FSROUND-48 |
-
-Where:
-- WW: Width in inches
-- DD: Depth or Diameter in inches
-
-#### 7. Accessories
-
-| Part Number Format | Description | Example |
-|--------------------|-------------|---------|
-| FIKA-CANTILEVER-[Type] | Cantilever support | FIKA-CANTILEVER-LH |
-| FIKA-CHR-[Type] | Chair | FIKA-CHR-AR |
-| FIKA-COH-[Length] | Cohesion | FIKA-COH-24 |
-| FIKA-J-[Length]-[Type] | J-channel | FIKA-J-60-E |
-| FIKA-PF-WWDD | Privacy filter | FIKA-PF-3048 |
-| FIKA-SHELF-WWDD | Shelf | FIKA-SHELF-3609 |
-| FIKA-TILE-WWDD | Tile | FIKA-TILE-4860 |
-
-Where:
-- WW: Width in inches
-- DD: Depth in inches
-- [Type]: Specific type or configuration
-- [Length]: Length in inches
-
-## Configuration Logic
-
-### Accessory Removal
-
-The FIKA product line includes functionality for removing accessories from worksurfaces, implemented through the FODataRemoveAccessoriesVessel.
-
-#### Spread Options
-
-The accessory removal feature supports different spread options:
-
-1. **No Spread**: Only affects the selected worksurface.
-2. **Sideways**: Affects the selected worksurface and its connected neighbors.
-3. **Group**: Affects all worksurfaces in the same connected group as the selected worksurface.
-4. **All**: Affects all worksurfaces in the main space.
-
-#### Visual Representation
-
-The accessory removal process provides visual feedback in both 2D and 3D representations:
-
-##### 2D Representation
-- For spread options other than "No Spread":
-  - Affected worksurfaces are filled with a dark red color (RGB: 192, 64, 64).
-  - If no worksurfaces are affected, a gray circle is displayed at the current position.
-
-##### 3D Representation
-- For spread options other than "No Spread":
-  - Affected worksurfaces are highlighted with a red frame.
-  - A red arrow is placed at the center of each affected worksurface, pointing upwards.
-  - If no worksurfaces are affected, a gray arrow is displayed at the current position.
-
-#### Interaction and Invalidation
-
-- The accessory removal process interacts with worksurfaces and their accessories, potentially affecting multiple worksurfaces based on their connections and groupings.
-- When accessories are removed, the affected worksurfaces are marked for rebuilding their 2D representation to reflect the changes.
-
-## Remarks
-
-- All part numbers start with "FIKA-" to identify the product line.
-- Dimensions are typically expressed in inches and follow a width-depth-height order when applicable.
-- Some product types have additional identifiers (e.g., "FS" for freestanding tables, "OPEN" for open storage units).
-- Always refer to the most up-to-date product catalog for the complete list of available part numbers and their specifications.
-- The exact appearance of the 2D and 3D representations for accessory removal may vary depending on the implementation of referenced methods and materials.
-- This documentation combines information from both the part numbering system and the configuration logic. For the most accurate and up-to-date information on specific features or functionalities, please consult the relevant technical documentation or contact the FIKA support team.
+- This documentation assumes that the concept of "accessories" and "worksurfaces" is understood by the reader. These terms refer to additional items that can be attached to work surfaces (like desks or tables) in an office environment.
+- The exact nature and types of accessories that can be removed are not specified in the provided code and may depend on other parts of the system.
+- The visual representations (2D and 3D) are approximations and may not reflect the exact appearance in the final product.

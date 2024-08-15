@@ -1,10 +1,8 @@
-Here's the consolidated document combining the information from both sources:
-
 # FIKA Office Junction Documentation
 
-## Product Overview
+## Overview
 
-The FIKA Office Junction is a versatile component used in office furniture configurations. It serves as a connecting point between panels or other office furniture components, allowing for flexible office layouts.
+This document describes the logic and rules for the FIKA Office Junction, a component used in office furniture configurations. The junction is a connecting element that links different panels or components in the FIKA office system.
 
 ## Part Number Logic
 
@@ -14,67 +12,56 @@ The part number for a FIKA Office Junction follows this structure:
 FIKA-J-[HEIGHT]-[TYPE]
 ```
 
-| Component | Description | Possible Values |
-|-----------|-------------|-----------------|
-| FIKA      | Brand identifier | Always "FIKA" |
-| J         | Product identifier for Junction | Always "J" |
-| [HEIGHT]  | Height of the junction in inches | 30, 36, 42, 48, 54, 60, 66, 72, 78, 84, 90, 96 |
-| [TYPE]    | Type of junction | E, I, L, T, V, X, Y |
+Where:
+- FIKA-J- is the prefix for all junction components
+- [HEIGHT] is the height of the junction in inches
+- [TYPE] is a single letter indicating the junction type
 
 ### Valid Part Numbers
 
-| Height | Available Types |
-|--------|-----------------|
-| 30     | E, L, T, V, X, Y |
-| 36     | E, L, T, V, X, Y |
-| 42     | E, L, T, V, X, Y |
-| 48     | E, L, T, V, X, Y |
-| 54     | E, L, T, V, X, Y |
-| 60     | E, L, T, V, X, Y |
-| 66     | E, L, T, V, X, Y |
-| 72     | E, L, T, V, X, Y |
-| 78     | E, L, T, V, X, Y |
-| 84     | E, L, T, V, X, Y |
-| 90     | E, L, T, V, X, Y |
-| 96     | E, L, T, V, X, Y |
+The following are valid part numbers for FIKA Office Junctions:
 
-Note: The 'I' type is listed as "FIKA-J-XX-I" in the provided part numbers, suggesting it might be a special case or placeholder.
+| Height (inches) | Available Types |
+|-----------------|-----------------|
+| 30, 36, 42, 48, 54, 60, 66, 72, 78, 84, 90, 96 | E, L, T, V, X, Y |
 
-### Junction Types Explanation
+Note: The type 'I' appears in the list as 'XX', which may indicate a placeholder or special case.
 
-While exact details are not provided, we can infer the likely shapes based on common office furniture configurations:
+Examples of valid part numbers:
+- FIKA-J-30-E
+- FIKA-J-48-T
+- FIKA-J-72-Y
 
-- E: Likely an end junction
-- I: Possibly an in-line connector (special case)
-- L: Likely a 90-degree corner junction
-- T: Probably a T-shaped junction for three-way connections
-- V: Possibly a variable angle junction
-- X: Likely a four-way junction
-- Y: Probably a Y-shaped junction for three-way connections at non-right angles
+## Junction Types
 
-## Dimensions and Positioning
+The single letter at the end of the part number indicates the junction type:
 
-- The junction has a depth (d) set to the value of `cFOFrameDepth`.
-- It is positioned within a square area of d x d inches.
-- For example, if the depth is 3 inches, the junction would be positioned within a 3x3 inch square.
+- E: Likely an end cap or termination piece
+- L: Probably an L-shaped junction for 90-degree corners
+- T: Likely a T-shaped junction for three-way connections
+- V: Possibly a variable angle or adjustable junction
+- X: Probably a four-way junction for connecting four panels
+- Y: Likely a three-way junction with a 120-degree angle between each connection
 
-## Tagging
+## Dimensions and Product Rules
 
-For identification purposes, a tag is placed on the junction:
-- Positioned at the middle of one side of the junction (at coordinates (d, d/2, 0))
-- Rotated 90 degrees
+1. The junction's depth (d) is fixed and matches the standard FIKA frame depth.
+2. The junction's width is equal to its depth, forming a square base.
+3. The height of the junction can vary and is determined by the connected panels or components.
+4. The junction's 3D representation extends from the ground up to the height specified in the part number.
 
-## Height Considerations
+## Interaction with Other Products
 
-- The height of the junction can vary from 30 inches to 96 inches in 6-inch increments.
-- The system will use the closest valid height when determining the part number.
+The junction is designed to connect with other FIKA office components. Its square base allows it to join panels or components from different directions, depending on the junction type.
 
-## Interaction with Other Components
+## Positioning and Orientation
 
-The junction connects panels or other office furniture components. Its various shapes allow it to connect components from different directions and in different configurations.
+1. The main tag is positioned at the middle of one side of the junction, at coordinates (d, d/2, 0), where 'd' is the depth.
+2. The main tag is rotated 90 degrees for easy readability when installed.
 
-## Remarks and Disclaimers
+## Additional Information
 
-- The exact implementation of the `getType()` method, which determines the junction type, is not provided in the given information.
-- The actual graphical representation and 3D model of the junction are not defined in this documentation. These aspects might be handled by other components of the system.
-- While we've inferred the meanings of the junction types, the exact configurations should be confirmed with product specifications or visual guides.
+1. The junction is part of a modular system, allowing for various configurations based on office layout needs.
+2. The height used in the part number is the closest standard height to the actual junction height. This means the part number may not always reflect the exact height of the junction, but rather the nearest standard size.
+
+This documentation provides a clear understanding of the FIKA Office Junction's characteristics, part numbering system, and configuration logic for interior designers and other non-technical users of the FIKA office system.

@@ -1,89 +1,66 @@
-Here's the consolidated document combining the information from both sources:
+Based on the provided documents, I will consolidate the information into a single, clear, and concise document. Since there is no information in the Part Numbers document, the consolidated document will be based entirely on the Configuration Logic document.
 
-# Chair Insertion Animation Documentation
+# FODataChairInsertAnimationG2 Documentation
 
-This document describes the logic and behavior of the chair insertion animation for interior designers. The animation is designed to facilitate the placement of chairs in a space, particularly in relation to tables or other furniture.
+This document describes the functionality and behavior of the FODataChairInsertAnimationG2 class, which is responsible for handling the insertion of chairs in a Fika office environment.
 
-## Multi-Chair Insertion
+## Overview
 
-The animation allows for the insertion of multiple chairs at once. This feature can be toggled on or off.
+The FODataChairInsertAnimationG2 class extends the ChairInsertAnimationG2 class and provides specific functionality for inserting chairs in a Fika office environment. It manages multiple chair insertions, chair rotation, and positioning relative to tables.
 
-- By default, multiple chair insertion is enabled.
-- Users can choose to insert a single chair or multiple chairs based on their needs.
+## Key Features
 
-## Chair Positioning
+1. Multiple Chair Insertion
+2. Chair Rotation Offset
+3. Chair Position Offset
+4. Table Snap Functionality
 
-When inserting chairs, there are two main adjustable parameters:
+## Detailed Functionality
 
-1. **Rotation Offset**: 
-   - This determines the angle at which the chair is rotated relative to its default position.
-   - The rotation can be set between 0 and 359 degrees.
-   - By default, there is no rotation (0 degrees).
+### Multiple Chair Insertion
 
-2. **Position Offset**: 
-   - This adjusts the chair's position relative to its default placement point.
-   - The offset can range from -6 inches to 24 inches.
-   - By default, there is no position offset (0 inches).
+- Allows insertion of multiple chairs at once
+- Default: Enabled (true)
+- User-configurable setting
+- System remembers the last used value
 
-These settings allow for fine-tuning of chair placement to ensure proper alignment with tables or other furniture.
+### Chair Rotation Offset
 
-## Chair-Table Interaction
+- Allows setting a rotation offset for inserted chairs
+- Default: 0 degrees
+- System remembers the last used value
 
-When placing chairs near tables:
+### Chair Position Offset
 
-- The animation attempts to snap the chair to an appropriate position relative to the table.
-- If the chair being placed is a specific type (FODataChair), it will use a predefined snap point to align with the table.
-- For other chair types, a default snapping behavior is used.
+- Allows setting a position offset for inserted chairs
+- Default: 0 inches
+- System remembers the last used value
 
-## Insertion Process
+### Table Snap Functionality
 
-1. If multiple chair insertion is enabled:
-   - The animation will attempt to place multiple chairs around a table or in a designated area.
-   - It takes into account the rotation and position offsets for each chair.
-   - Chairs are placed to avoid overlapping with each other or other furniture.
-
-2. If single chair insertion is selected:
-   - Only one chair will be placed at a time.
-   - The chair will be positioned according to the specified rotation and position offsets.
-
-3. After placement, the animation checks for any conflicts or overlaps with existing furniture.
-
-4. The process completes once all selected chairs are successfully placed or if the user ends the animation manually.
+- Automatically snaps chairs to nearby tables
+- Specifically designed for FODataChair objects
 
 ## User Interaction
 
-- Users can adjust the multi-insert, rotation, and position settings during the animation process.
-- These settings are remembered for future use, allowing for consistent chair placement across multiple insertion actions.
+1. **Changing Settings**: The system updates and stores values for multiple insert, rotation offset, and position offset when changed by the user.
 
-## Limitations and Considerations
+2. **Inserting Chairs**: 
+   - Multiple chairs inserted if enabled, single chair if disabled
+   - Based on available space and configuration
 
-- The animation may behave differently depending on the specific type of chair being inserted.
-- Complex room layouts or tightly packed spaces may limit the ability to insert multiple chairs simultaneously.
-- Users should be aware of the room's scale and furniture arrangement to ensure optimal chair placement.
+3. **Chair Placement**: 
+   - Applies rotation offset to each chair
+   - Applies position offset to each chair
+   - Attempts to snap FODataChairs to nearby tables
 
-## Part Numbers
+## Important Notes
 
-The FIKA product line includes various chair options. Here's a breakdown of the chair part numbers:
+- Exact rules for multiple chair placement (spacing, maximum number) are not specified in this class
+- Specific dimensions and constraints for chair insertion are not defined in this class
 
-| Part Number | Description |
-|-------------|-------------|
-| FIKA-CHR-01 | Standard Chair |
-| FIKA-CHR-AR | Chair with Armrests |
-| FIKA-CHR-HR | Chair with Headrest |
+## Remarks
 
-The part number structure for chairs follows this pattern:
-
-| Prefix | Product Type | Feature |
-|--------|--------------|---------|
-| FIKA   | CHR          | 01/AR/HR |
-
-- FIKA: Represents the product line
-- CHR: Indicates it's a chair
-- Feature: 
-  - 01: Standard model
-  - AR: With armrests
-  - HR: With headrest
-
-When selecting chairs for insertion, users should refer to these part numbers to ensure they are using the correct chair type for their design.
-
-This animation tool aims to streamline the process of placing chairs in a design, offering flexibility and precision in furniture arrangement. By understanding the part number system, designers can easily identify and select the appropriate chair models for their projects.
+- This documentation is based solely on the provided class code
+- Some functionalities may be inherited from parent classes or defined in other system components
+- The method for building part numbers for the chairs is not defined in this class

@@ -1,171 +1,132 @@
-# FIKA Office Product Documentation
+Here's the consolidated document combining the information from both sources:
 
-## Part Number Structure
+# FIKA Office Worksurface Edge and Part Number Documentation
 
-FIKA Office products use a standardized part numbering system to identify different components and configurations. Understanding this system is crucial for efficient product selection and ordering.
+## Introduction
 
-### General Structure
+This document describes the logic and behavior of two types of worksurface edges used in FIKA Office furniture: the Standard Edge and the Big Edge. Additionally, it provides detailed information about the part numbering system for FIKA products.
 
-All FIKA Office part numbers follow this general structure:
-
-```
-FIKA-[ProductType]-[Specifications]
-```
-
-Where:
-- `FIKA` is the brand identifier
-- `ProductType` indicates the category of the product
-- `Specifications` provide details about size, configuration, or other attributes
-
-## Product Categories and Part Numbers
-
-### 1. Worksurfaces (WS)
-
-Worksurfaces are available in various shapes and sizes. The part number structure for worksurfaces is:
-
-```
-FIKA-WS-[Shape]-[Width][Depth]
-```
-
-| Component | Description | Possible Values |
-|-----------|-------------|-----------------|
-| Shape     | Shape of the worksurface | RECT (Rectangle), ARC (Arc) |
-| Width     | Width in inches | 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84, 90, 96 |
-| Depth     | Depth in inches | 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84, 90, 96 |
-
-Examples:
-- `FIKA-WS-RECT-3060`: Rectangular worksurface, 30" wide by 60" deep
-- `FIKA-WS-ARC-2448`: Arc-shaped worksurface, 24" wide by 48" deep
-
-### 2. Cabinets (CAB)
-
-Cabinets come in different configurations. The part number structure for cabinets is:
-
-```
-FIKA-CAB-[Type]-[Width][Depth]
-```
-
-| Component | Description | Possible Values |
-|-----------|-------------|-----------------|
-| Type      | Cabinet configuration | BBF (Box/Box/File), FF (File/File), SBOOO (Single Box, Open Open Open) |
-| Width     | Width in inches | 15, 18 |
-| Depth     | Depth in inches | 18, 24, 30 |
-
-Examples:
-- `FIKA-CAB-BBF-1524`: Box/Box/File cabinet, 15" wide by 24" deep
-- `FIKA-CAB-FF-1830`: File/File cabinet, 18" wide by 30" deep
-
-### 3. Bookshelves (BOOK)
-
-Bookshelves are available in different heights. The part number structure for bookshelves is:
-
-```
-FIKA-BOOK[Height]-[Width][Depth]
-```
-
-| Component | Description | Possible Values |
-|-----------|-------------|-----------------|
-| Height    | Number of shelf levels | 2, 3, 4, 5 |
-| Width     | Width in inches | 24, 30, 36, 42 |
-| Depth     | Depth in inches | 24, 30 |
-
-Examples:
-- `FIKA-BOOK3-3024`: 3-level bookshelf, 30" wide by 24" deep
-- `FIKA-BOOK5-4230`: 5-level bookshelf, 42" wide by 30" deep
-
-### 4. Lateral Files (LAT)
-
-Lateral files come in various configurations. The part number structure for lateral files is:
-
-```
-FIKA-LAT[Type]-[Width][Depth]
-```
-
-| Component | Description | Possible Values |
-|-----------|-------------|-----------------|
-| Type      | Number of drawers or configuration | 1, 15, 2, 3, 4, 5, 6 |
-| Width     | Width in inches | 30, 36, 42 |
-| Depth     | Depth in inches | 18, 24 |
-
-Examples:
-- `FIKA-LAT2-3618`: 2-drawer lateral file, 36" wide by 18" deep
-- `FIKA-LAT4-4224`: 4-drawer lateral file, 42" wide by 24" deep
-
-### 5. Overhead Storage (OVERHEAD)
-
-Overhead storage units are available in different widths and configurations. The part number structure is:
-
-```
-FIKA-OVERHEAD-[Width]14[-OPEN]
-```
-
-| Component | Description | Possible Values |
-|-----------|-------------|-----------------|
-| Width     | Width in inches | 30, 36, 42, 48, 54, 60 |
-| -OPEN     | Optional, indicates open shelving | Present or absent |
-
-Examples:
-- `FIKA-OVERHEAD-3614`: Overhead storage, 36" wide with doors
-- `FIKA-OVERHEAD-4814-OPEN`: Open overhead storage, 48" wide
-
-### 6. Tables (TBL)
-
-Tables are available in various shapes and sizes. The part number structure for tables is:
-
-```
-FIKA-TBL-[Shape]-[Width][Depth]
-```
-
-| Component | Description | Possible Values |
-|-----------|-------------|-----------------|
-| Shape     | Shape of the table | FSRECT (Freestanding Rectangle), FSROUND (Freestanding Round) |
-| Width     | Width or diameter in inches | 30, 36, 42, 48, 54, 60, 66, 72, 78, 84 |
-| Depth     | Depth in inches (for rectangular tables) | 36, 42 |
-
-Examples:
-- `FIKA-TBL-FSRECT-7242`: Freestanding rectangular table, 72" wide by 42" deep
-- `FIKA-TBL-FSROUND-48`: Freestanding round table, 48" diameter
-
-## Edge Types
-
-FIKA Office worksurfaces are available with two types of edges: Standard Edge and Big Edge. These edge types are not reflected in the part number and need to be specified separately when ordering.
+## Standard Edge (FOStdEdge) and Big Edge (FOBigEdge)
 
 ### Standard Edge (FOStdEdge)
 
-1. **Identification**: "Std" in the system
-2. **Edge Depth**: 1 millimeter (mm)
-3. **Profile Shape**: 
-   - Curves downward from the top of the worksurface
-   - Extends 1 mm out at its deepest point
-   - Smooth transition back to the underside of the worksurface
+#### Description
+
+The Standard Edge is a subtle, rounded edge profile that provides a clean and professional look to worksurfaces.
+
+#### Characteristics
+
+- Edge Type: "Std"
+- Edge Depth: 1 mm (inward from the worksurface edge)
+
+#### Profile Shape
+
+The Standard Edge has a slightly curved profile:
+1. It starts at the top of the worksurface.
+2. It curves inward and downward for about 0.075 inches (1.905 mm).
+3. It then continues straight down to near the bottom of the worksurface.
+4. Finally, it curves back outward to meet the bottom of the worksurface.
+
+This shape provides a smooth, rounded edge that is comfortable to touch and resistant to chipping or damage.
 
 ### Big Edge (FOBigEdge)
 
-1. **Identification**: "Big" in the system
-2. **Edge Depth**: 3 millimeters (mm)
-3. **Profile Shape**: 
-   - More pronounced curve from the top of the worksurface
-   - Extends 3 mm out at its deepest point
-   - More noticeable transition back to the underside of the worksurface
+#### Description
 
-### Comparison and Usage
+The Big Edge is a more pronounced edge profile that gives worksurfaces a bolder, more substantial appearance.
 
-- The Big Edge is three times deeper than the Standard Edge, providing a more substantial look.
-- Choice between edges depends on aesthetic preferences and functional requirements.
-- Both edge types offer a smooth, rounded transition from top to bottom.
+#### Characteristics
 
-## Important Notes
+- Edge Type: "Big"
+- Edge Depth: 3 mm (inward from the worksurface edge)
 
-1. Not all combinations of dimensions are available for every product type. Refer to the product catalog for valid configurations.
+#### Profile Shape
 
-2. When ordering, always use the complete part number to ensure accuracy.
+The Big Edge has a more dramatic curved profile:
+1. It starts at the top of the worksurface.
+2. It curves inward and downward for about 0.125 inches (3.175 mm).
+3. It then continues straight down to near the bottom of the worksurface.
+4. Finally, it curves back outward to meet the bottom of the worksurface.
 
-3. Some product types may have additional options or variations not covered in this guide. Consult the full product documentation for more detailed information.
+This shape provides a more noticeable edge treatment that can add visual interest to the worksurface while still maintaining a smooth, comfortable feel.
 
-4. The edge type (Standard or Big) must be specified separately when ordering, as it's not included in the part number.
+### Comparison
 
-5. The exact thickness of the worksurface (referred to as `foWsThickness` in the system) is not specified in the provided information. This thickness would affect the overall dimensions of the edge profile.
+- The Big Edge is three times deeper than the Standard Edge (3 mm vs. 1 mm).
+- The Big Edge has a more pronounced curve at the top and bottom of the profile.
+- Both edges provide a smooth transition from the top surface to the edge, avoiding sharp corners.
 
-6. Consider both visual impact and practical implications (such as cleaning or durability) when selecting an edge type.
+### Usage Considerations
 
-By understanding this part numbering system and edge options, Interior Designers can easily identify and specify the exact FIKA Office products needed for their projects.
+- The choice between Standard and Big Edge may depend on the overall design aesthetic of the office space.
+- The Standard Edge provides a more subtle, traditional look.
+- The Big Edge offers a more modern, substantial appearance.
+- Both edge types are designed to be comfortable for users and protect the worksurface from damage.
+
+## Part Number Logic
+
+FIKA products use a standardized part numbering system that provides information about the product type, dimensions, and variations. Let's break down the structure of FIKA part numbers:
+
+### Part Number Structure
+
+FIKA part numbers follow this general structure:
+
+```
+FIKA-[Product Type]-[Specifications]-[Dimensions]
+```
+
+Here's a detailed explanation of each component:
+
+1. **FIKA**: All part numbers start with "FIKA-" to identify the brand.
+2. **Product Type**: A code indicating the type of product (e.g., WS for Worksurface, CAB for Cabinet).
+3. **Specifications**: Additional details about the product, which may include:
+   - Shape (e.g., RECT for Rectangle, ARC for Arced)
+   - Configuration (e.g., BBF for Box/Box/File, FF for File/File)
+4. **Dimensions**: The size of the product, typically in inches.
+
+### Examples and Explanations
+
+Let's analyze some specific part numbers:
+
+#### Worksurfaces
+
+| Part Number | Product Type | Shape | Width | Depth |
+|-------------|--------------|-------|-------|-------|
+| FIKA-WS-RECT-2430 | Worksurface | Rectangle | 24" | 30" |
+| FIKA-WS-ARC-3060 | Worksurface | Arced | 30" | 60" |
+
+- **FIKA-WS-RECT-2430**: A rectangular worksurface that is 24 inches wide and 30 inches deep.
+- **FIKA-WS-ARC-3060**: An arced worksurface that is 30 inches wide and 60 inches deep.
+
+#### Cabinets
+
+| Part Number | Product Type | Configuration | Width | Depth | Height |
+|-------------|--------------|---------------|-------|-------|--------|
+| FIKA-CAB-BBF-1524 | Cabinet | Box/Box/File | 15" | 24" | (standard) |
+| FIKA-CAB-FF-1830 | Cabinet | File/File | 18" | 30" | (standard) |
+
+- **FIKA-CAB-BBF-1524**: A cabinet with two box drawers and one file drawer, 15 inches wide and 24 inches deep.
+- **FIKA-CAB-FF-1830**: A cabinet with two file drawers, 18 inches wide and 30 inches deep.
+
+#### Bookshelves
+
+| Part Number | Product Type | Shelf Count | Width | Height |
+|-------------|--------------|-------------|-------|--------|
+| FIKA-BOOK3-3024 | Bookshelf | 3 shelves | 30" | 24" |
+| FIKA-BOOK5-4230 | Bookshelf | 5 shelves | 42" | 30" |
+
+- **FIKA-BOOK3-3024**: A bookshelf with 3 shelves, 30 inches wide and 24 inches high.
+- **FIKA-BOOK5-4230**: A bookshelf with 5 shelves, 42 inches wide and 30 inches high.
+
+### Additional Part Number Examples
+
+- **FIKA-OVERHEAD-3614**: An overhead storage unit, 36 inches wide and 14 inches high.
+- **FIKA-TILE-3630**: A tile (possibly for dividers or panels), 36 inches wide and 30 inches high.
+- **FIKA-TOWER-5FF-1524-L**: A tower unit with 5 file drawers, 15 inches wide, 24 inches deep, left-handed configuration.
+
+## Remarks and Disclaimers
+
+- The exact thickness of the worksurface (referred to as `foWsThickness` in the code) is not specified in the provided information.
+- The material of the edges is not specified in the provided code.
+- No specific rules or constraints regarding the interaction of these edges with other products were found in the provided code.
+- While this document provides a comprehensive overview of the part numbering system, there may be additional variations or special cases not covered here. Always refer to the most up-to-date product catalog or specifications for the most accurate information.

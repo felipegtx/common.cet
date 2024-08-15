@@ -1,114 +1,88 @@
 # FODataNamedFrame Documentation
 
-This document describes the functionality, behavior, and part number structure of the FODataNamedFrame class, which is a specialized panel frame used in office furniture configurations.
+This document describes the functionality and behavior of the FODataNamedFrame class, a specialized panel frame used in office furniture configurations.
 
 ## Overview
 
-The FODataNamedFrame is an extension of the AODataSkinFrame class, designed to represent a named panel frame in an office furniture system. It includes features for managing frame types, updating panel names, handling various aspects of the panel's behavior within a space, and generating part numbers.
-
-## Part Number Structure
-
-The part numbers for the FODataNamedFrame follow a specific structure that encodes information about the product type, dimensions, and configuration:
-
-```markdown
-| Prefix | Product Type | Dimensions | Configuration |
-|--------|--------------|------------|---------------|
-| FIKA-  | WS-          | XXXX       | YYYY          |
-```
-
-1. **Prefix**: All part numbers start with "FIKA-", which is the product line identifier.
-2. **Product Type**: Indicates the specific type of product (e.g., WS for workstation).
-3. **Dimensions**: Represents the size of the product, typically in inches.
-4. **Configuration**: Additional details about the product's setup or features.
-
-### Example Part Numbers
-
-1. `FIKA-WS-RECT-2424`: Rectangular Workstation, 24" x 24"
-2. `FIKA-WS-ARC-3060`: Arc-shaped Workstation, 30" x 60"
-3. `FIKA-WS-120-30484830`: 120-degree Workstation, 30" x 48" x 48" x 30"
-
-### Valid Part Numbers
-
-| Product Type | Part Number Pattern | Description |
-|--------------|----------------------|-------------|
-| Rectangular  | FIKA-WS-RECT-WWDD    | WW: Width (18-96), DD: Depth (18-96) |
-| Arc          | FIKA-WS-ARC-WWDD     | WW: Width (24-96), DD: Depth (18-96) |
-| 120-degree   | FIKA-WS-120-WWDDDDWW | WW: Width (18-48), DD: Depth (36-48) |
-
-Note: The actual range of dimensions may vary based on product specifications and availability.
+The FODataNamedFrame is an extension of the AODataSkinFrame class, designed to represent a named panel frame in an office furniture system. It includes features for managing frame types, updating panel names, and handling various aspects of the panel's behavior within a space.
 
 ## Key Features
 
 1. Frame Type Management
 2. Panel Naming
-3. Part Number Generation
-4. Height and Animation Handling
-5. Property Management
-6. Space Interaction
+3. Height and Width Handling
+4. Property Management
+5. Space Interaction
 
 ## Detailed Functionality
 
 ### Frame Type Management
 
 - Each frame has a unique `frameTypeId` that identifies its type.
-- The `frameName` is derived from this ID and is used for display purposes.
-- The frame type can be reset if needed, removing it from the current world configuration.
+- The `frameName` is derived from the `frameTypeId` and corresponds to a predefined list of frame names.
 
-### Panel Naming and Part Number Generation
+### Panel Naming
 
-- The panel name and part number are automatically updated when certain properties change or when the panel is moved to a different space.
-- The naming system uses a "baptist" mechanism to ensure unique identifiers within the world.
-- The `createFikaData` method generates appropriate part numbers based on the frame type, dimensions, and configuration.
+- The panel name is automatically updated when certain conditions change, such as height or frame type.
+- The `updatePanelName` function ensures that the panel name remains consistent with its properties and the space it occupies.
 
-### Height and Animation Handling
+### Height and Width Handling
 
-- When the height of the frame changes, it triggers an update of the panel name and part number.
-- After insert animations complete, the panel name and part number are also updated.
+- When the height of the panel changes, the `heightChanged` function is called, triggering an update to the panel name.
+- The panel's dimensions are used in the `mainTagText` function to create a descriptive tag for the panel (e.g., "Frame Name - Width/Height").
 
 ### Property Management
 
-- The class manages various properties and responds to changes in these properties.
-- It has special handling for nominal height properties, ensuring they align with the available height domain.
+- The class handles various properties and responds to property changes.
+- When animation properties change, it updates internal values and may adjust the height to the closest valid value.
 
 ### Space Interaction
 
-- The frame interacts with its containing space and can update its configuration based on the space it's in.
-- It can check if it's the last frame of its type in the current space.
+- The panel interacts with its containing space and other panels in the space.
+- It can determine if it's the last panel of its type in the space using the `lastInSpace` function.
+- The panel can update its type and appearance based on the space it's in and the other panels present.
 
-## Important Methods
+## Part Number Logic
 
-- `updatePanelName`: Updates the panel's name and part number based on its current configuration and space.
-- `frameKey`: Generates a unique key for the frame, incorporating information from its skins.
-- `createPanelJunctionSnapper`: Creates a specialized junction snapper for connecting panels.
-- `lastInSpace`: Checks if this frame is the last of its type in the current space.
-- `createFikaData`: Generates the appropriate part numbers for the frame.
+The part number logic is not explicitly defined in this class. However, the `frameKey` function suggests that the part number might be constructed using the following components:
 
-## User Interface Considerations
+1. A prefix "FO"
+2. The panel height
+3. Information from the upper skin (if present)
+4. Information from the lower skin (if present)
 
-- The frame's name, dimensions, and part number are displayed in the main tag text, showing the frame name, width, and height.
-- In development mode, the class interacts with a panel manager dialog to update type information.
+For example, a part number might look like: "FO72UPSK01DWSK02" (where 72 is the height in inches, UPSK01 is an upper skin code, and DWSK02 is a lower skin code).
 
-## Constraints and Rules
+## Dimensions
 
-- Part numbers are unique for each specific configuration of the FODataNamedFrame.
-- The dimensions used in part numbers are always in inches and rounded to the nearest whole number.
-- Certain combinations of dimensions may not be valid and will not generate a part number.
-- The frame type system relies on a predefined set of frame IDs (`foFrameIds`).
-- The naming and identification system is tied to the world and space the frame is in, ensuring consistency across the furniture system.
+The class uses the following dimension-related functions:
 
-## Part Number Usage
+- `w` for width
+- `h` for height
+- `d` for depth (inherited from parent classes)
 
-The part numbers generated by the FODataNamedFrame are used in:
+The dimensions are likely defined in the parent classes or determined by the specific product configuration.
 
-1. Inventory Management
-2. Order Processing
-3. Assembly Instructions
-4. Reporting
+## Interaction Rules
 
-## Remarks and Disclaimers
+1. The panel can be part of a group of panels in a space.
+2. It interacts with a panel manager dialog when in development mode.
+3. The panel can be connected to other panels using junction snappers.
+4. It responds to animation events and property changes.
 
-- The exact logic for part number generation is encapsulated within the `createFikaData` method.
-- For the most up-to-date list of valid part numbers and their interpretations, please refer to the current product catalog or consult with the inventory management system.
-- The functionality related to skins (upSkin and downSkin) is referenced but not fully implemented in this class, suggesting that it relies on parent class implementations or external systems.
+## Invalidation Rules
 
-This documentation provides a comprehensive overview of the FODataNamedFrame class's functionality, part number structure, and usage. For more specific details about dimensions, part numbers, or interaction with other components, additional information from related classes or systems may be required.
+The panel's appearance and properties are invalidated (marked for update) when:
+
+1. The panel name is updated
+2. The frame type changes
+3. The height changes
+4. Certain properties that start with "cAOMultiDataPK" are modified
+
+## Additional Notes
+
+- The class uses a baptism system for managing panel types within a world or space.
+- It has special behaviors when suspended or unsuspended, particularly in development mode.
+- The class creates custom junction connections and snappers specific to this type of panel.
+
+This documentation provides an overview of the FODataNamedFrame class's functionality. For more specific details about valid part numbers, dimensions, or product-specific rules, additional information from related classes or product specifications would be needed.
