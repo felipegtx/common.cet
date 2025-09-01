@@ -1,0 +1,239 @@
+/** Configura CET Source Copyright Notice (CETSC)
+
+   This file contains Configura CM source code and is part of the
+   Configura CET Development Platform (CETDEV). Configura CM
+   is a programming language created by Configura Sverige AB.
+   Configura, Configura CET and Configura CM are trademarks of
+   Configura Sverige AB. Configura Sverige AB owns Configura CET,
+   Configura CM, and CETDEV.
+
+   Copyright (C) 2004 Configura Sverige AB, All rights reserved.
+
+   You can modify this source file under the terms of the Configura CET
+   Source Licence Agreement (CETSL) as published by Configura Sverige AB.
+
+   Configura Sverige AB has exclusive rights to all changes, modifications,
+   and corrections of this source file. Configura Sverige AB has exclusive
+   rights to any new source file containing material from this source file.
+   A new source file based on this source file or containing material from
+   this source file has to include this Configura CET Source Copyright Notice
+   in its full content. All changes, modifications, and corrections mentioned
+   above shall be reported to Configura Sverige AB within One Month from
+   the date that the modification occurred.
+
+   Configura CM is distributed in the hope that it will be useful, but
+   WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+   See the CETSL for more details.
+
+   You should have received a copy of the CETSL along with the CETDEV.
+   If not, write to Configura Sverige AB, Box 306, SE-581 02 Linköping, Sweden.
+   Tel +46 13377800, Fax +46 13377855,
+   Email: info@configura.com, www.configura.com
+
+   END OF CETSC
+*/
+
+package custom.cetx2025;
+
+
+/**
+ * Dunder Mifflin Chapter Creator.
+ *  - The SingleChapterCreator is designed to make the page(s) for their respective chapter. 
+ *    Whereas the "Multi" or ChapterCreatorGroup organizes the Singles into a collection.
+ */
+public class DunMufChapterCreator extends SingleChapterCreator {
+
+    /**
+     * Whether or not to use the template layout.
+     */
+    public bool useTemplateLayout = false;
+
+    /***********************************************************************
+     * Basics
+     ***********************************************************************/
+    
+    /**
+     * Duplicatable
+     */
+    public bool duplicatable() {
+        return false;
+    }
+
+
+    /**
+     * Icon
+     */
+    public Image icon() {
+        return dmIcon("entry-img");
+    }
+
+
+    /**
+     * Has control
+     */
+    public bool hasControl() {
+        return true;
+    }
+
+
+    /**
+     * Parent key.
+     */
+    public str parentKey() {
+        return alternativeGroupKey;
+    }
+
+
+    /**
+     * Visible.
+     */
+    public bool visible() {
+        return true;
+    }
+
+
+    /**
+     * Name visible to user.
+     */
+    public str userName() {
+        return "Paper Company";
+    }
+
+    
+    /**
+     * Creates the chapter control UI.
+     */
+    public Window createControl(Window parent) {
+        DunMufChapterUI uiWindow(parent, this);
+        uiWindow.autoSize();
+        return uiWindow;
+    }
+
+
+    /***********************************************************************
+     * Public API
+     ***********************************************************************/
+
+    /**
+     * Create chapter.
+     */
+    public Chapter performCreation() {
+        if (this.useTemplateLayout) {
+            return this.createTemplateBasedChapter();
+        }
+        return this.createProgrammaticChapter();
+    }
+
+
+    /***********************************************************************
+     * Programmatic Chapter Creation
+     ***********************************************************************/
+
+    /**
+     * Create programmatic chapter.
+     */
+    final private Chapter createProgrammaticChapter() {
+        /// The object where all the content being generated will live.
+        ///  - Each Frame represents a page, thus if multiple pages are needed 
+        ///    multiple PageFrames are needed.
+        StandardPageFrame frame();
+        frame.setCreator(this);
+        
+        StandardChapter standardChapter("Automated Paper Report", 
+            pageSetups.setupReport, 
+            frame);
+
+        static int numberOfPages = 20;
+        for (page in (1..numberOfPages)) {
+
+            /// Section  --  cm.std.print
+            /// |---GridSection
+            /// |---Layout
+            /// |   |---GridLayout
+            GridLayout grid();
+            GridLayoutFiller filler();
+            
+            /// A Text layout
+            TextLayout tLayout("Hey, you!",
+                               nominalFontSize=3cm,
+                               textColor=red,
+                               padding=size2D(0.5mm, 0));
+            filler.grid.addCell(tLayout, (0, 0), size=(2, 1));
+
+            /// New row
+            filler.newRow();
+
+            /// A Image layout
+            ImageLayout imgLayout(image=dmIcon("paper-df"),
+                                  preferredWidth=10cm,
+                                  shrinkToPreferredSize=false,
+                                  padding=size2D(0.5mm, 0));
+            filler << imgLayout;
+            filler.newRow();
+
+            /// A "free text" layout
+            filler << spnn("We're at page ", page, " of ", numberOfPages);
+
+            /// Add the section to the chapter
+            standardChapter << filler.grid;
+        
+            if (!last) standardChapter << pageBreak;
+        }
+
+        return standardChapter;
+    }
+
+
+    /***********************************************************************
+     * Template Based Chapter Creation
+     ***********************************************************************/
+
+    /**
+     * Create template based chapter.
+     */
+    final private Chapter createTemplateBasedChapter() {
+        if (!World world = activeWorld()) {
+            pln("No world found");
+            return null;
+        }
+
+        StreamPaper sp(cmNative("custom/cetx2025/template/funWithPapers.cmppr"));
+        if (!PaperSpace space = sp.load(world)) { 
+            pln("Failed to load paper space");
+            return null;
+        }
+
+        PSReportChapter newChapter(this.userName(), this.pageSetups().setupReport, space);
+
+        /// Uncomment to tailor the template
+        // this.customizeTemplateChapter(space);
+
+        return newChapter;
+    }
+
+
+    /**
+     * Customize the template chapter.
+     */
+    final private void customizeTemplateChapter(PaperSpace space) {
+        for (z in space.snappers) {
+
+            /// We can inspect each snapper and modify it as we like
+            pln(#z);
+            
+            if (!?ImageSnapper img = z) continue;
+
+            /// Just for fun, change the image to something else
+            Url url = cmNative("custom/cetx2025/imgs/no-joke.png");
+            if (!url.isReadable()) {
+                pln("No url for ", #url);
+                continue;
+            }
+            img.loadImage(url);
+        }
+    }
+
+
+
+}
