@@ -207,7 +207,7 @@ public class DunMufChapterCreator extends SingleChapterCreator {
         PSReportChapter newChapter(this.userName(), this.pageSetups().setupReport, space);
 
         /// Uncomment to tailor the template
-        // this.customizeTemplateChapter(space);
+        this.customizeTemplateChapter(space);
 
         return newChapter;
     }

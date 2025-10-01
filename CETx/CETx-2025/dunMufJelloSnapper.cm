@@ -36,23 +36,41 @@
 
 package custom.cetx2025;
 
-/**
- * Register the Dunder Mifflin chapter creators.
- */
-public void registerDunMufChapterCreators() {
-    registerChapterCreator(new DunMufChapterCreator());
-    pln("Dunder Mifflin chapter creators registered");
-}
+/* 
+This gets added to the Lib via:
+ -> \cm\std\tools\faceliftPaperLibrary.cm
+
+    SubSectionLimb dunMufTools(sub, pkg, key="duMufSection", label="Dunder Mifflin Tools",
+        hint=productButtonMediumWithLabel);
+    SnapperLimb(dunMufTools, #"custom.cetx2025",  key="DunMufJelloSnapper",
+                label="Jello Prank!", image=custom.cetx2025.dmIcon("jello"));
+
+*/
 
 /**
- * Return a DM image.
+ * Dunder Mifflin Jello Snapper
  */
-public Image dmIcon(str image) {
-    symbol k = #cetx2025;
-    putIconDbExtensionDir(k, "custom/cetX2025/imgs/");
-    return icon(image, k);
-}
+public class DunMufJelloSnapper extends ImageSnapper {
 
-{
-    registerDunMufChapterCreators();
+    /***********************************************************************
+     * Graphics
+     ***********************************************************************/
+
+    /**
+     * Draw graphs on a layerbuffer.
+     */
+    public void drawGraphs(LayerBuffer lb, View view, GeometricFinder finder=null) {
+        lb.setLayer(this.drawLayer);
+        
+        if (!file.?isReadable()) { 
+            file = cmNative(spnn("custom/cetX2025/imgs/jello-", randI(1, 5), ".png"));
+        }
+
+        this.createGImage();
+
+        GInstance gs(point(w > 0 ? 0 : w, d > 0 ? -d : 0, 0));
+        gImage.?setSize((|w|, |d|));
+        gs << gImage;
+        gs.draw(lb);
+    }
 }
